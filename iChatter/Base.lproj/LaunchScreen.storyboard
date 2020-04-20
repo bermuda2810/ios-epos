@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +12,70 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_background" translatesAutoresizingMaskIntoConstraints="NO" id="FTv-KT-ALR" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcg-f4-jDS">
+                                <rect key="frame" x="70.5" y="218" width="273" height="460"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_black_icon" translatesAutoresizingMaskIntoConstraints="NO" id="9h9-o5-hK5">
+                                        <rect key="frame" x="80" y="80" width="113" height="140.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9h9-o5-hK5" secondAttribute="height" multiplier="105:131" id="BNh-86-9th"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.92549019607843142" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9h9-o5-hK5" firstAttribute="centerX" secondItem="zcg-f4-jDS" secondAttribute="centerX" id="Asu-XN-wqQ"/>
+                                    <constraint firstAttribute="width" secondItem="zcg-f4-jDS" secondAttribute="height" multiplier="85:143" id="h87-gW-qPz"/>
+                                    <constraint firstItem="9h9-o5-hK5" firstAttribute="top" secondItem="zcg-f4-jDS" secondAttribute="top" constant="80" id="i9q-6j-n4U"/>
+                                    <constraint firstItem="9h9-o5-hK5" firstAttribute="width" secondItem="zcg-f4-jDS" secondAttribute="width" multiplier="0.411765" id="yQk-29-5hh"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_stuffs" translatesAutoresizingMaskIntoConstraints="NO" id="OCs-au-y8Y">
+                                <rect key="frame" x="56.5" y="158" width="301" height="309"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OCs-au-y8Y" secondAttribute="height" multiplier="301:309" id="uum-ye-oxL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q90-9G-9KF">
+                                <rect key="frame" x="30.5" y="556.5" width="155" height="81.5"/>
+                                <string key="text">Chat with
+Friends</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FTv-KT-ALR" secondAttribute="bottom" id="44O-Ec-75L"/>
+                            <constraint firstAttribute="trailing" secondItem="FTv-KT-ALR" secondAttribute="trailing" id="4i9-fi-E73"/>
+                            <constraint firstItem="q90-9G-9KF" firstAttribute="bottom" secondItem="zcg-f4-jDS" secondAttribute="bottom" constant="-40" id="4nJ-AL-HtJ"/>
+                            <constraint firstAttribute="top" secondItem="FTv-KT-ALR" secondAttribute="top" id="AhF-Sx-LBG"/>
+                            <constraint firstItem="zcg-f4-jDS" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.66" id="H9j-yP-i8q"/>
+                            <constraint firstItem="FTv-KT-ALR" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Uao-OV-84g"/>
+                            <constraint firstItem="zcg-f4-jDS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WQX-gW-Anv"/>
+                            <constraint firstItem="OCs-au-y8Y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cAS-aH-kgl"/>
+                            <constraint firstItem="OCs-au-y8Y" firstAttribute="top" secondItem="zcg-f4-jDS" secondAttribute="top" constant="-60" id="iL6-dR-6nX"/>
+                            <constraint firstItem="q90-9G-9KF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30.333333333333329" id="j10-7o-8cS"/>
+                            <constraint firstItem="zcg-f4-jDS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vUT-Qn-WBO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.33035714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_background" width="405.5" height="720.5"/>
+        <image name="ic_black_icon" width="104.5" height="130.5"/>
+        <image name="ic_stuffs" width="301" height="308.5"/>
+    </resources>
 </document>
