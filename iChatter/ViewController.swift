@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import CoreLocation
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func onFacebookPressed(_ sender: Any) {
+        self.loginFacebook()
+    }
+    
+    func loginFacebook() {
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["public_profile"], from: self) { [unowned self] (result, error) in
+            if error != nil {
+                print("Process error")
+            } else if (result!.isCancelled) {
+                print("Cancelled")
+            } else {
+                print("Process ok")
+            }
+        }
+    }
 
 }
 
