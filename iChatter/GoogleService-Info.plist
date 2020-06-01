@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>960357596349-0tk37727f3bi2prpfqk0jctbo3ueaqks.apps.googleusercontent.com</string>
+	<string>960357596349-4de4qg75oh8jbl98679rmshhpnqksmpb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.960357596349-0tk37727f3bi2prpfqk0jctbo3ueaqks</string>
+	<string>com.googleusercontent.apps.960357596349-4de4qg75oh8jbl98679rmshhpnqksmpb</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAS11cX11JcpXyD6L9Bo2rXnzmU7jfQDz0</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>me.iChatter</string>
+	<string>class.iChatter</string>
 	<key>PROJECT_ID</key>
 	<string>ichatter-a4215</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:960357596349:ios:e6c962f74008e2ebd04bd4</string>
+	<string>1:960357596349:ios:f6f9458b96e92212d04bd4</string>
 	<key>DATABASE_URL</key>
 	<string>https://ichatter-a4215.firebaseio.com</string>
 </dict>

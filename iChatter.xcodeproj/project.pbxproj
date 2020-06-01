@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0077142481208C00171B2F /* GoogleSignIn.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD0077132481208C00171B2F /* GoogleSignIn.plist */; };
+		BD00771924812CD700171B2F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD00771824812CD700171B2F /* LoginPresenter.swift */; };
+		BD17050124851CDE00FD84FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD17050024851CDD00FD84FE /* GoogleService-Info.plist */; };
 		BD693EDF245843810093F643 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EDE245843810093F643 /* ChatViewController.swift */; };
 		BD693EE2245844130093F643 /* BaseStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EE1245844130093F643 /* BaseStoryBoard.swift */; };
 		BD693EE4245845660093F643 /* MainStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EE3245845660093F643 /* MainStoryBoard.swift */; };
@@ -21,11 +24,10 @@
 		BD90F9D1244E069500FF366A /* MyImageMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9D0244E069500FF366A /* MyImageMessageViewCell.swift */; };
 		BDC90786244A0354008C041C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC90785244A0354008C041C /* AppDelegate.swift */; };
 		BDC90788244A0354008C041C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC90787244A0354008C041C /* SceneDelegate.swift */; };
-		BDC9078A244A0354008C041C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC90789244A0354008C041C /* ViewController.swift */; };
+		BDC9078A244A0354008C041C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC90789244A0354008C041C /* LoginViewController.swift */; };
 		BDC9078D244A0354008C041C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC9078B244A0354008C041C /* Main.storyboard */; };
 		BDC9078F244A035E008C041C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC9078E244A035E008C041C /* Assets.xcassets */; };
 		BDC90792244A035E008C041C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC90790244A035E008C041C /* LaunchScreen.storyboard */; };
-		BDCE7D552461DADB00B12EBE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDCE7D542461DADB00B12EBE /* GoogleService-Info.plist */; };
 		FA284CB6BE92441EDA4F72EC /* Pods_iChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93800A00F2ECF7C2047AFEB /* Pods_iChatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,10 @@
 		19F6A36D71D46D076276F853 /* Pods-iChatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChatter.release.xcconfig"; path = "Target Support Files/Pods-iChatter/Pods-iChatter.release.xcconfig"; sourceTree = "<group>"; };
 		7BFA620165862BB32AD3B2CB /* Pods-iChatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChatter.debug.xcconfig"; path = "Target Support Files/Pods-iChatter/Pods-iChatter.debug.xcconfig"; sourceTree = "<group>"; };
 		A93800A00F2ECF7C2047AFEB /* Pods_iChatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iChatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0077132481208C00171B2F /* GoogleSignIn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleSignIn.plist; sourceTree = "<group>"; };
+		BD00771824812CD700171B2F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		BD1704FF2485197200FD84FE /* iChatter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iChatter.entitlements; sourceTree = "<group>"; };
+		BD17050024851CDD00FD84FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD693EDE245843810093F643 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BD693EE1245844130093F643 /* BaseStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStoryBoard.swift; sourceTree = "<group>"; };
 		BD693EE3245845660093F643 /* MainStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryBoard.swift; sourceTree = "<group>"; };
@@ -48,12 +54,11 @@
 		BDC90782244A0353008C041C /* iChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC90785244A0354008C041C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDC90787244A0354008C041C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BDC90789244A0354008C041C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDC90789244A0354008C041C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BDC9078C244A0354008C041C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDC9078E244A035E008C041C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDC90791244A035E008C041C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDC90793244A035E008C041C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDCE7D542461DADB00B12EBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,14 @@
 				A93800A00F2ECF7C2047AFEB /* Pods_iChatter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD00771524812BAC00171B2F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BD00771824812CD700171B2F /* LoginPresenter.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		BD693EE0245843FE0093F643 /* Helper */ = {
@@ -106,18 +119,19 @@
 		BD90F9C4244E049500FF366A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BD90F9C5244E049B00FF366A /* ChatController */,
+				BD00771524812BAC00171B2F /* Login */,
+				BD90F9C5244E049B00FF366A /* Chat */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		BD90F9C5244E049B00FF366A /* ChatController */ = {
+		BD90F9C5244E049B00FF366A /* Chat */ = {
 			isa = PBXGroup;
 			children = (
 				BD90F9C9244E050A00FF366A /* Cell */,
 				BD693EDE245843810093F643 /* ChatViewController.swift */,
 			);
-			path = ChatController;
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		BD90F9C6244E04A700FF366A /* Model */ = {
@@ -161,6 +175,7 @@
 		BDC90784244A0353008C041C /* iChatter */ = {
 			isa = PBXGroup;
 			children = (
+				BD1704FF2485197200FD84FE /* iChatter.entitlements */,
 				BD693EE724584AD30093F643 /* Storyboard */,
 				BD693EE0245843FE0093F643 /* Helper */,
 				BD72D17824516CEB00DC1B10 /* Storage */,
@@ -168,9 +183,10 @@
 				BD90F9C4244E049500FF366A /* Controller */,
 				BDC90785244A0354008C041C /* AppDelegate.swift */,
 				BDC90787244A0354008C041C /* SceneDelegate.swift */,
-				BDC90789244A0354008C041C /* ViewController.swift */,
+				BDC90789244A0354008C041C /* LoginViewController.swift */,
 				BDC9078E244A035E008C041C /* Assets.xcassets */,
-				BDCE7D542461DADB00B12EBE /* GoogleService-Info.plist */,
+				BD0077132481208C00171B2F /* GoogleSignIn.plist */,
+				BD17050024851CDD00FD84FE /* GoogleService-Info.plist */,
 				BDC90790244A035E008C041C /* LaunchScreen.storyboard */,
 				BDC90793244A035E008C041C /* Info.plist */,
 			);
@@ -183,7 +199,6 @@
 				7BFA620165862BB32AD3B2CB /* Pods-iChatter.debug.xcconfig */,
 				19F6A36D71D46D076276F853 /* Pods-iChatter.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -250,9 +265,10 @@
 			files = (
 				BDC90792244A035E008C041C /* LaunchScreen.storyboard in Resources */,
 				BDC9078F244A035E008C041C /* Assets.xcassets in Resources */,
-				BDCE7D552461DADB00B12EBE /* GoogleService-Info.plist in Resources */,
 				BDC9078D244A0354008C041C /* Main.storyboard in Resources */,
 				BD90F9C3244C991C00FF366A /* Home.storyboard in Resources */,
+				BD0077142481208C00171B2F /* GoogleSignIn.plist in Resources */,
+				BD17050124851CDE00FD84FE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD90F9D1244E069500FF366A /* MyImageMessageViewCell.swift in Sources */,
-				BDC9078A244A0354008C041C /* ViewController.swift in Sources */,
+				BDC9078A244A0354008C041C /* LoginViewController.swift in Sources */,
 				BD693EDF245843810093F643 /* ChatViewController.swift in Sources */,
 				BDC90786244A0354008C041C /* AppDelegate.swift in Sources */,
 				BD693EE4245845660093F643 /* MainStoryBoard.swift in Sources */,
@@ -331,6 +347,7 @@
 				BD72D17724516C2700DC1B10 /* Location.swift in Sources */,
 				BD693EE2245844130093F643 /* BaseStoryBoard.swift in Sources */,
 				BD90F9CD244E066600FF366A /* SenderImageMessageViewCell.swift in Sources */,
+				BD00771924812CD700171B2F /* LoginPresenter.swift in Sources */,
 				BD90F9CB244E052F00FF366A /* SenderMessageItem.swift in Sources */,
 				BDC90788244A0354008C041C /* SceneDelegate.swift in Sources */,
 				BD72D17A24516CFA00DC1B10 /* LocationsStorage.swift in Sources */,
@@ -480,7 +497,9 @@
 			baseConfigurationReference = 7BFA620165862BB32AD3B2CB /* Pods-iChatter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = iChatter/iChatter.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = L5Q8584KE5;
 				INFOPLIST_FILE = iChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -488,8 +507,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.iChatter;
+				PRODUCT_BUNDLE_IDENTIFIER = class.iChatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = dev_provisioning_iChatter;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -500,7 +520,9 @@
 			baseConfigurationReference = 19F6A36D71D46D076276F853 /* Pods-iChatter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = iChatter/iChatter.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = L5Q8584KE5;
 				INFOPLIST_FILE = iChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -508,8 +530,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.iChatter;
+				PRODUCT_BUNDLE_IDENTIFIER = class.iChatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = dev_provisioning_iChatter;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
