@@ -12,27 +12,58 @@ import CoreLocation
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginStackView: UIStackView!
-    
-    private var loginPresenter : LoginPresenter!
+    private var presenter : LoginPresenter!
         
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginPresenter = LoginPresenter()
+        presenter = LoginPresenter(view : self)
     }
     
-
+    //MARK: - SNS Press
     @IBAction func onFacebookPressed(_ sender: Any) {
-        loginPresenter.loginFacebook(viewController: self)
+        presenter.requestLoginFacebook()
     }
     
     @IBAction func onGooglePressed(_ sender: Any) {
-        loginPresenter.loginGoogle(viewController: self)
+        presenter.requestLoginGooogle()
     }
     
     @IBAction func onApplePressed(_ sender: Any) {
-        loginPresenter.loginApple(window: self.view.window!)
+        presenter.requestLoginApple()
     }
-
+    
+    func gotoChatView() {
+        
+    }
+    
+    //MARK: - Error Dialog
+    private func showErrorDialog(message : String) {
+        print(message)
+    }
+    
+    
+    //MARK: - Dialog Waiting
+    private func showWaitingDialog() {
+        
+    }
+    
+    private func hideWaitingDialog() {
+        
+    }
 }
 
+extension LoginViewController : LoginView {
+
+    func onLoginSuccess() {
+        self.hideWaitingDialog()
+        self.gotoChatView()
+    }
+    
+    func onLoginFail(message: String) {
+        self.showErrorDialog(message: message)
+    }
+    
+    func onStartLogin() {
+        self.showWaitingDialog()
+    }
+}

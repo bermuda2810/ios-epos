@@ -12,84 +12,109 @@ import GoogleSignIn
 import AuthenticationServices
 import Firebase
 
-class LoginPresenter: NSObject, GIDSignInDelegate , ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+
+protocol LoginView {
+    func onLoginSuccess()
+    func onLoginFail(message : String)
+    func onStartLogin()
+}
+
+class LoginPresenter : NSObject {
     
     weak var window : UIWindow!
+    var loginView : LoginView?
     
-        
-    func loginFacebook(viewController : LoginViewController)  {
+    init(view : LoginView) {
+        self.loginView = view
+    }
+    
+    //MARK: - Request Login
+    func requestLoginFacebook() {
+        if loginView == nil {
+            return
+        }
         let loginManager = LoginManager()
-        loginManager.logIn(permissions: ["public_profile"], from: viewController) { [unowned self] (result, error) in
-            if error != nil {
-                print("Process error")
-            } else if (result!.isCancelled) {
-                print("Cancelled")
-            } else {
-                print("Process ok")
-                let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
-                self.authWithFirebase(credential: credential)
-//                self.requestFacebookProfile()
-            }
+        let vc = loginView as? UIViewController
+        loginManager.logIn(permissions: ["public_profile"], from: vc) { [unowned self] (result, error) in
+            self.handleLoginFacebook(result, error)
         }
     }
     
-    
-    private func authWithFirebase(credential : AuthCredential) {
-        Auth.auth().signIn(with: credential) { (authResult, error) in
-            print("Auth ok")
-        }
-    }
-    
-    private func requestFacebookProfile() {
-//        loginView.willStartRequest()
-        Profile.loadCurrentProfile { (profile, error) in
-            if (error != nil) {
-                return
-            }
-            if let uProfile = profile {
-                print("FB : \(uProfile.userID)")
-//                self.requestLoginFB(fbId: uProfile.userID)
-            }
-        }
-    }
-    
-    func loginGoogle(viewController : LoginViewController){
+    func requestLoginGooogle() {
+        let vc = loginView as? UIViewController
         GIDSignIn.sharedInstance().clientID = "1004815788275-e08bd4lnqptuscqg5nq0acohrcu2f3jg.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance()?.presentingViewController = viewController
+        GIDSignIn.sharedInstance()?.presentingViewController = vc
         GIDSignIn.sharedInstance().signIn()
     }
-
     
-    func loginApple(window : UIWindow) {
-        self.window = window
+    func requestLoginApple() {
+        let vc = loginView as? UIViewController
+        self.window = vc?.view.window
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
-        
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
     }
     
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-          if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-            print("The user has not signed in before or they have since signed out.")
-          } else {
-            print("\(error.localizedDescription)")
-          }
-          return
-        }else {
-            print("Login ok")
+    // MARK: - Handle after login by Facebook
+    private func handleLoginFacebook(_ result : LoginManagerLoginResult?, _ error : Error?) {
+        if error != nil {
+            self.loginView?.onLoginFail(message: "Login FB Error")
+        } else if (result!.isCancelled) {
+            self.loginView?.onLoginFail(message: "User FB cancel")
+        } else {
+            let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+            self.authWithFirebase(credential: credential)
         }
     }
     
+    // MARK: - Authen by Firebase
+    private func authWithFirebase(credential : AuthCredential) {
+        loginView?.onStartLogin()
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            if (error != nil) {
+                self.loginView?.onLoginFail(message: error.debugDescription)
+            }else {
+                self.loginView?.onLoginSuccess()
+            }
+        }
+    }
+}
+
+// MARK: - Google Login
+extension LoginPresenter : GIDSignInDelegate {
     
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            handleErrorLoginGoogle(error)
+        }else {
+            handleGoogleSuccess(user)
+        }
+    }
+    
+    private func handleErrorLoginGoogle(_ error: Error!) {
+        if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+            print("The user has not signed in before or they have since signed out.")
+        } else {
+            print("\(error.localizedDescription)")
+        }
+        loginView?.onLoginFail(message: "Login Google error")
+    }
+    
+    private func handleGoogleSuccess(_ user: GIDGoogleUser!) {
+        let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.clientID, accessToken: user.authentication.accessToken)
+        self.authWithFirebase(credential: credential)
+    }
+}
+
+// MARK: - Apple Login
+extension LoginPresenter : ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        print("Did login by apple")
+
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error)
@@ -98,7 +123,6 @@ class LoginPresenter: NSObject, GIDSignInDelegate , ASAuthorizationControllerDel
     }
     
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-           return self.window
+        return self.window
     }
-    
 }
