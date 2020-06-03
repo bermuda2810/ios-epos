@@ -29,16 +29,16 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.1004815788275-e08bd4lnqptuscqg5nq0acohrcu2f3jg</string>
+				<string>com.googleusercontent.apps.960357596349-4de4qg75oh8jbl98679rmshhpnqksmpb</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLIconFile</key>
+			<string>I</string>
 			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.1004815788275-e08bd4lnqptuscqg5nq0acohrcu2f3jg</string>
-			</array>
+			<array/>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>

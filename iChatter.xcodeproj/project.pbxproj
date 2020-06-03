@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD0077142481208C00171B2F /* GoogleSignIn.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD0077132481208C00171B2F /* GoogleSignIn.plist */; };
 		BD00771924812CD700171B2F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD00771824812CD700171B2F /* LoginPresenter.swift */; };
 		BD17050124851CDE00FD84FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD17050024851CDD00FD84FE /* GoogleService-Info.plist */; };
 		BD693EDF245843810093F643 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EDE245843810093F643 /* ChatViewController.swift */; };
@@ -35,7 +34,6 @@
 		19F6A36D71D46D076276F853 /* Pods-iChatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChatter.release.xcconfig"; path = "Target Support Files/Pods-iChatter/Pods-iChatter.release.xcconfig"; sourceTree = "<group>"; };
 		7BFA620165862BB32AD3B2CB /* Pods-iChatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChatter.debug.xcconfig"; path = "Target Support Files/Pods-iChatter/Pods-iChatter.debug.xcconfig"; sourceTree = "<group>"; };
 		A93800A00F2ECF7C2047AFEB /* Pods_iChatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iChatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD0077132481208C00171B2F /* GoogleSignIn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleSignIn.plist; sourceTree = "<group>"; };
 		BD00771824812CD700171B2F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		BD1704FF2485197200FD84FE /* iChatter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iChatter.entitlements; sourceTree = "<group>"; };
 		BD17050024851CDD00FD84FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 				BDC90787244A0354008C041C /* SceneDelegate.swift */,
 				BDC90789244A0354008C041C /* LoginViewController.swift */,
 				BDC9078E244A035E008C041C /* Assets.xcassets */,
-				BD0077132481208C00171B2F /* GoogleSignIn.plist */,
 				BD17050024851CDD00FD84FE /* GoogleService-Info.plist */,
 				BDC90790244A035E008C041C /* LaunchScreen.storyboard */,
 				BDC90793244A035E008C041C /* Info.plist */,
@@ -267,7 +264,6 @@
 				BDC9078F244A035E008C041C /* Assets.xcassets in Resources */,
 				BDC9078D244A0354008C041C /* Main.storyboard in Resources */,
 				BD90F9C3244C991C00FF366A /* Home.storyboard in Resources */,
-				BD0077142481208C00171B2F /* GoogleSignIn.plist in Resources */,
 				BD17050124851CDE00FD84FE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,7 +42,7 @@ class LoginPresenter : NSObject {
     
     func requestLoginGooogle() {
         let vc = loginView as? UIViewController
-        GIDSignIn.sharedInstance().clientID = "1004815788275-e08bd4lnqptuscqg5nq0acohrcu2f3jg.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = "960357596349-4de4qg75oh8jbl98679rmshhpnqksmpb.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.presentingViewController = vc
         GIDSignIn.sharedInstance().signIn()
@@ -106,7 +106,7 @@ extension LoginPresenter : GIDSignInDelegate {
     }
     
     private func handleGoogleSuccess(_ user: GIDGoogleUser!) {
-        let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.clientID, accessToken: user.authentication.accessToken)
+        let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
         self.authWithFirebase(credential: credential)
     }
 }
