@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dh6-6d-snB">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -40,6 +40,9 @@
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="UiH-AA-eht" kind="show" id="Y9L-dS-NBQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ers-Xq-Wd2">
                                                 <rect key="frame" x="0.0" y="49" width="250" height="34"/>
@@ -86,6 +89,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="0.5338232517" green="0.4771694541" blue="0.69661909339999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onRegisterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8x-PA-Yi3"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCl-U3-EAy">
                                         <rect key="frame" x="93.5" y="429" width="113" height="12"/>
@@ -133,24 +139,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TZR-wU-n6Z"/>
                     <connections>
                         <outlet property="loginStackView" destination="7fZ-Q6-mbI" id="4mL-it-n8n"/>
+                        <segue destination="KW6-xr-q5P" kind="show" identifier="segueShowRegisterScreen" id="G21-zx-Yaq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-20" y="-63"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Email Controller-->
         <scene sceneID="mIG-jj-QzY">
             <objects>
-                <viewController id="UiH-AA-eht" sceneMemberID="viewController">
+                <viewController id="UiH-AA-eht" customClass="LoginEmailController" customModule="iChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T5f-yp-GK2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_background" translatesAutoresizingMaskIntoConstraints="NO" id="6b4-2p-G2j">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ZI-EV-l8y" userLabel="Container">
                                 <rect key="frame" x="37.5" y="82" width="300" height="505"/>
@@ -272,15 +280,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zdW-Nj-SPU"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mit-wK-Dd9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQA-LJ-VTr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="-68"/>
+            <point key="canvasLocation" x="950" y="-63"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="Mjz-ZR-5HO">
             <objects>
-                <viewController id="KW6-xr-q5P" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="KW6-xr-q5P" customClass="RegisterViewController" customModule="iChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6hZ-Pa-Ut1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,6 +410,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onRegisterPressed:" destination="KW6-xr-q5P" eventType="touchUpInside" id="U8w-qB-lW1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -447,10 +459,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ntm-9a-hZO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="KS6-dG-gTh"/>
+                    <connections>
+                        <outlet property="edtPassword" destination="dWv-ya-4cg" id="add-fH-C7k"/>
+                        <outlet property="edtRetypePassword" destination="jxA-sM-gQ9" id="4KN-Pv-HUB"/>
+                        <outlet property="edtUsername" destination="N9o-fg-HKi" id="j9D-E3-qmK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXz-ce-fpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="-67"/>
+            <point key="canvasLocation" x="1009" y="726"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KaS-cR-XQq">
+            <objects>
+                <navigationController id="Dh6-6d-snB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1uZ-0p-46j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="U10-CI-ig2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAQ-bh-zHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-918" y="-66"/>
         </scene>
     </scenes>
     <resources>

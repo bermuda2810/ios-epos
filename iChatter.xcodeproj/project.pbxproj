@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BD00771924812CD700171B2F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD00771824812CD700171B2F /* LoginPresenter.swift */; };
 		BD17050124851CDE00FD84FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD17050024851CDD00FD84FE /* GoogleService-Info.plist */; };
+		BD41D9BD2490F145009AB858 /* LoginEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD41D9BC2490F145009AB858 /* LoginEmailController.swift */; };
+		BD41D9C02490F3A0009AB858 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD41D9BF2490F3A0009AB858 /* RegisterViewController.swift */; };
 		BD693EDF245843810093F643 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EDE245843810093F643 /* ChatViewController.swift */; };
 		BD693EE2245844130093F643 /* BaseStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EE1245844130093F643 /* BaseStoryBoard.swift */; };
 		BD693EE4245845660093F643 /* MainStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EE3245845660093F643 /* MainStoryBoard.swift */; };
@@ -27,6 +29,7 @@
 		BDC9078D244A0354008C041C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC9078B244A0354008C041C /* Main.storyboard */; };
 		BDC9078F244A035E008C041C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC9078E244A035E008C041C /* Assets.xcassets */; };
 		BDC90792244A035E008C041C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC90790244A035E008C041C /* LaunchScreen.storyboard */; };
+		BDEAD6EC248E531300740843 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEAD6EB248E531300740843 /* BaseViewController.swift */; };
 		FA284CB6BE92441EDA4F72EC /* Pods_iChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93800A00F2ECF7C2047AFEB /* Pods_iChatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,8 @@
 		BD00771824812CD700171B2F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		BD1704FF2485197200FD84FE /* iChatter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iChatter.entitlements; sourceTree = "<group>"; };
 		BD17050024851CDD00FD84FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BD41D9BC2490F145009AB858 /* LoginEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailController.swift; sourceTree = "<group>"; };
+		BD41D9BF2490F3A0009AB858 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BD693EDE245843810093F643 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BD693EE1245844130093F643 /* BaseStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStoryBoard.swift; sourceTree = "<group>"; };
 		BD693EE3245845660093F643 /* MainStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryBoard.swift; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 		BDC9078E244A035E008C041C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDC90791244A035E008C041C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDC90793244A035E008C041C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDEAD6EB248E531300740843 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +88,19 @@
 		BD00771524812BAC00171B2F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BDC90789244A0354008C041C /* LoginViewController.swift */,
 				BD00771824812CD700171B2F /* LoginPresenter.swift */,
+				BD41D9BC2490F145009AB858 /* LoginEmailController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		BD41D9BE2490F390009AB858 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				BD41D9BF2490F3A0009AB858 /* RegisterViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		BD693EE0245843FE0093F643 /* Helper */ = {
@@ -117,8 +133,11 @@
 		BD90F9C4244E049500FF366A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BD41D9BE2490F390009AB858 /* Register */,
+				BDEAD6EA248E526E00740843 /* Presenter */,
 				BD00771524812BAC00171B2F /* Login */,
 				BD90F9C5244E049B00FF366A /* Chat */,
+				BDEAD6EB248E531300740843 /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,13 +200,19 @@
 				BD90F9C4244E049500FF366A /* Controller */,
 				BDC90785244A0354008C041C /* AppDelegate.swift */,
 				BDC90787244A0354008C041C /* SceneDelegate.swift */,
-				BDC90789244A0354008C041C /* LoginViewController.swift */,
 				BDC9078E244A035E008C041C /* Assets.xcassets */,
 				BD17050024851CDD00FD84FE /* GoogleService-Info.plist */,
 				BDC90790244A035E008C041C /* LaunchScreen.storyboard */,
 				BDC90793244A035E008C041C /* Info.plist */,
 			);
 			path = iChatter;
+			sourceTree = "<group>";
+		};
+		BDEAD6EA248E526E00740843 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		F9D7F2464F3F180CE1B66578 /* Pods */ = {
@@ -341,12 +366,15 @@
 				BD693EE4245845660093F643 /* MainStoryBoard.swift in Sources */,
 				BD90F9CF244E068500FF366A /* MyTextMessageViewCell.swift in Sources */,
 				BD72D17724516C2700DC1B10 /* Location.swift in Sources */,
+				BD41D9BD2490F145009AB858 /* LoginEmailController.swift in Sources */,
 				BD693EE2245844130093F643 /* BaseStoryBoard.swift in Sources */,
+				BD41D9C02490F3A0009AB858 /* RegisterViewController.swift in Sources */,
 				BD90F9CD244E066600FF366A /* SenderImageMessageViewCell.swift in Sources */,
 				BD00771924812CD700171B2F /* LoginPresenter.swift in Sources */,
 				BD90F9CB244E052F00FF366A /* SenderMessageItem.swift in Sources */,
 				BDC90788244A0354008C041C /* SceneDelegate.swift in Sources */,
 				BD72D17A24516CFA00DC1B10 /* LocationsStorage.swift in Sources */,
+				BDEAD6EC248E531300740843 /* BaseViewController.swift in Sources */,
 				BD90F9C8244E04FC00FF366A /* SenderTextMessageViewCell.swift in Sources */,
 				BD693EE6245845840093F643 /* HomeStoryBoard.swift in Sources */,
 			);
@@ -494,8 +522,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iChatter/iChatter.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5Q8584KE5;
 				INFOPLIST_FILE = iChatter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -505,7 +533,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = class.iChatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dev_provisioning_iChatter;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -528,7 +556,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = class.iChatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dev_provisioning_iChatter;
+				PROVISIONING_PROFILE_SPECIFIER = dev1_provisioning_iChatter;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

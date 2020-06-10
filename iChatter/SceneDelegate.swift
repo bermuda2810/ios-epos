@@ -16,9 +16,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        let homeStoryboard = MainStoryBoard()
-        let chatViewController = homeStoryboard.getInitialViewController()
-        self.window?.rootViewController = chatViewController
+        setupRootViewController()
+    }
+    
+    func setupRootViewController() {
+        let login = UserDefaults.standard.bool(forKey: "login")
+        var rootViewController : UIViewController
+        if login {
+            let homeStoryboard = HomeStoryBoard()
+            rootViewController = homeStoryboard.getInitialViewController()
+        }else {
+            let mainStoryboard = MainStoryBoard()
+            rootViewController = mainStoryboard.getInitialViewController()
+        }
+        self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
     }
     
