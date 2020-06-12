@@ -20,18 +20,24 @@ class RegisterViewController: BaseViewController {
     }
     
     @IBAction func onRegisterPressed(_ sender: Any) {
-        let parent = self.navigationController
-        print("Say hello")
+        self.showRegisterSuccess()
     }
     
-    /*
-    // MARK: - Navigation
+    private func showRegisterSuccess() {
+        if let username = edtUsername.text,  let password = edtPassword.text, let retypPass = edtRetypePassword.text {
+            performSegue(withIdentifier: "segueRegisterSuccess", sender: nil)
+        }
+    }
+    
+
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segueRegisterSuccess" {
+            let destVC = segue.destination as! RegisterSuccessController
+            destVC.username = self.edtUsername.text! as String
+        }
+        
     }
-    */
 
 }

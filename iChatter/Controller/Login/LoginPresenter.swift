@@ -22,9 +22,12 @@ protocol LoginView {
 
 class LoginPresenter : NSObject {
     
-    weak var window : UIWindow!
-    var loginView : LoginView!
+    private weak var window : UIWindow!
+    private var loginView : LoginView!
     fileprivate var currentNonce: String?
+    
+    var name : String!
+    
     
     init(view : LoginView) {
         self.loginView = view

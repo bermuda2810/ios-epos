@@ -16,13 +16,27 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         presenter = LoginPresenter(view : self)
+        presenter.name = "LoginPresenter"
+        registerNotificationCenter()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    private func registerNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector:#selector(onReceviedNotification(_:)), name: NSNotification.Name.init(rawValue: Channel.REGISTER), object: nil)
+    }
+    
+    @objc func onReceviedNotification(_ notification : Notification)  {
+        let data = notification.object! as! String
+        print("Login view recevied \(data)")
     }
     
     //MARK: - SNS Login
@@ -71,4 +85,8 @@ extension LoginViewController : LoginView {
         let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
         sceneDelegate.setupRootViewController()
     }
+}
+
+extension LoginViewController {
+    
 }

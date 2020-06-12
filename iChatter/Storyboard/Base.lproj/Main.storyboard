@@ -286,6 +286,46 @@
             </objects>
             <point key="canvasLocation" x="950" y="-63"/>
         </scene>
+        <!--Register Success Controller-->
+        <scene sceneID="oqH-mW-J2D">
+            <objects>
+                <viewController id="ktL-d6-Kha" customClass="RegisterSuccessController" customModule="iChatter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ju-5Q-a6o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng ký thành công" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXP-95-0i1">
+                                <rect key="frame" x="110.5" y="345" width="154" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3B3-Il-YA3">
+                                <rect key="frame" x="150" y="397" width="75" height="30"/>
+                                <state key="normal" title="Đăng nhập"/>
+                                <connections>
+                                    <action selector="onCompletePressed:" destination="ktL-d6-Kha" eventType="touchUpInside" id="2JM-Gc-W3b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aXP-95-0i1" firstAttribute="centerY" secondItem="wX6-Ro-0Q2" secondAttribute="centerY" id="GyU-Wf-pHi"/>
+                            <constraint firstItem="3B3-Il-YA3" firstAttribute="centerX" secondItem="aXP-95-0i1" secondAttribute="centerX" id="N7Y-4K-Vrt"/>
+                            <constraint firstItem="3B3-Il-YA3" firstAttribute="top" secondItem="aXP-95-0i1" secondAttribute="bottom" constant="31" id="c5X-mo-K7w"/>
+                            <constraint firstItem="aXP-95-0i1" firstAttribute="centerX" secondItem="wX6-Ro-0Q2" secondAttribute="centerX" id="pzp-49-1Cx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wX6-Ro-0Q2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YAY-vt-80h"/>
+                    <connections>
+                        <outlet property="lblNotification" destination="aXP-95-0i1" id="3d3-dX-trS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UxP-gU-Tl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2020" y="738"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="Mjz-ZR-5HO">
             <objects>
@@ -464,11 +504,12 @@
                         <outlet property="edtPassword" destination="dWv-ya-4cg" id="add-fH-C7k"/>
                         <outlet property="edtRetypePassword" destination="jxA-sM-gQ9" id="4KN-Pv-HUB"/>
                         <outlet property="edtUsername" destination="N9o-fg-HKi" id="j9D-E3-qmK"/>
+                        <segue destination="ktL-d6-Kha" kind="show" identifier="segueRegisterSuccess" id="an1-DC-VcI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXz-ce-fpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="726"/>
+            <point key="canvasLocation" x="1009" y="739"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KaS-cR-XQq">

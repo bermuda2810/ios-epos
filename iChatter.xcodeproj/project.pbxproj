@@ -17,6 +17,8 @@
 		BD693EE6245845840093F643 /* HomeStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EE5245845840093F643 /* HomeStoryBoard.swift */; };
 		BD72D17724516C2700DC1B10 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72D17624516C2700DC1B10 /* Location.swift */; };
 		BD72D17A24516CFA00DC1B10 /* LocationsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72D17924516CFA00DC1B10 /* LocationsStorage.swift */; };
+		BD73BA9724939439001A62D6 /* RegisterSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA9624939439001A62D6 /* RegisterSuccessController.swift */; };
+		BD73BA9A2493A78A001A62D6 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA992493A78A001A62D6 /* Channel.swift */; };
 		BD90F9C3244C991C00FF366A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD90F9C2244C991C00FF366A /* Home.storyboard */; };
 		BD90F9C8244E04FC00FF366A /* SenderTextMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9C7244E04FC00FF366A /* SenderTextMessageViewCell.swift */; };
 		BD90F9CB244E052F00FF366A /* SenderMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */; };
@@ -48,6 +50,8 @@
 		BD693EE5245845840093F643 /* HomeStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoryBoard.swift; sourceTree = "<group>"; };
 		BD72D17624516C2700DC1B10 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		BD72D17924516CFA00DC1B10 /* LocationsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsStorage.swift; sourceTree = "<group>"; };
+		BD73BA9624939439001A62D6 /* RegisterSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessController.swift; sourceTree = "<group>"; };
+		BD73BA992493A78A001A62D6 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		BD90F9C2244C991C00FF366A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BD90F9C7244E04FC00FF366A /* SenderTextMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderTextMessageViewCell.swift; sourceTree = "<group>"; };
 		BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderMessageItem.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				BD41D9BF2490F3A0009AB858 /* RegisterViewController.swift */,
+				BD73BA9624939439001A62D6 /* RegisterSuccessController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -128,6 +133,14 @@
 				BD72D17924516CFA00DC1B10 /* LocationsStorage.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		BD73BA982493A770001A62D6 /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				BD73BA992493A78A001A62D6 /* Channel.swift */,
+			);
+			path = NotificationCenter;
 			sourceTree = "<group>";
 		};
 		BD90F9C4244E049500FF366A /* Controller */ = {
@@ -192,6 +205,7 @@
 		BDC90784244A0353008C041C /* iChatter */ = {
 			isa = PBXGroup;
 			children = (
+				BD73BA982493A770001A62D6 /* NotificationCenter */,
 				BD1704FF2485197200FD84FE /* iChatter.entitlements */,
 				BD693EE724584AD30093F643 /* Storyboard */,
 				BD693EE0245843FE0093F643 /* Helper */,
@@ -360,10 +374,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD90F9D1244E069500FF366A /* MyImageMessageViewCell.swift in Sources */,
+				BD73BA9A2493A78A001A62D6 /* Channel.swift in Sources */,
 				BDC9078A244A0354008C041C /* LoginViewController.swift in Sources */,
 				BD693EDF245843810093F643 /* ChatViewController.swift in Sources */,
 				BDC90786244A0354008C041C /* AppDelegate.swift in Sources */,
 				BD693EE4245845660093F643 /* MainStoryBoard.swift in Sources */,
+				BD73BA9724939439001A62D6 /* RegisterSuccessController.swift in Sources */,
 				BD90F9CF244E068500FF366A /* MyTextMessageViewCell.swift in Sources */,
 				BD72D17724516C2700DC1B10 /* Location.swift in Sources */,
 				BD41D9BD2490F145009AB858 /* LoginEmailController.swift in Sources */,

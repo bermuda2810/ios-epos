@@ -37,6 +37,13 @@ class BaseViewController: UIViewController {
     func hideWaitingDialog() {
         hud?.dismiss()
     }
+    
+    
+    func postNotificationCenter(channel : String, data : Any?) {
+        var notification : Notification = Notification(name: Notification.Name.init(rawValue: channel))
+        notification.object = data
+        NotificationCenter.default.post(notification)
+    }
 
     /*
     // MARK: - Navigation
