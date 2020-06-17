@@ -94,7 +94,7 @@ class LoginPresenter : NSObject {
     }
     
     private func markLogined() {
-        UserDefaults.standard.set(true, forKey: "login")
+        UserDefaults.standard.set(true, forKey: AuthCode.LOGIN)
     }
 }
 
