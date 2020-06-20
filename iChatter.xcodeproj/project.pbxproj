@@ -11,6 +11,12 @@
 		BD17050124851CDE00FD84FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD17050024851CDD00FD84FE /* GoogleService-Info.plist */; };
 		BD41D9BD2490F145009AB858 /* LoginEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD41D9BC2490F145009AB858 /* LoginEmailController.swift */; };
 		BD41D9C02490F3A0009AB858 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD41D9BF2490F3A0009AB858 /* RegisterViewController.swift */; };
+		BD491FCE249CCD1B004E083E /* BaseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD491FCD249CCD1B004E083E /* BaseMessage.swift */; };
+		BD491FD0249CCD84004E083E /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD491FCF249CCD84004E083E /* TextMessage.swift */; };
+		BD491FD2249CCE16004E083E /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD491FD1249CCE16004E083E /* ImageMessage.swift */; };
+		BD491FD4249CD1C0004E083E /* BaseMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD491FD3249CD1C0004E083E /* BaseMessageViewCell.swift */; };
+		BD491FD6249CD574004E083E /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD491FD5249CD574004E083E /* MessageType.swift */; };
+		BD491FD9249CDAB4004E083E /* FirestoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD491FD8249CDAB4004E083E /* FirestoreHelper.swift */; };
 		BD693EDF245843810093F643 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EDE245843810093F643 /* ChatViewController.swift */; };
 		BD693EE2245844130093F643 /* BaseStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EE1245844130093F643 /* BaseStoryBoard.swift */; };
 		BD693EE4245845660093F643 /* MainStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693EE3245845660093F643 /* MainStoryBoard.swift */; };
@@ -23,7 +29,7 @@
 		BD90F9C8244E04FC00FF366A /* SenderTextMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9C7244E04FC00FF366A /* SenderTextMessageViewCell.swift */; };
 		BD90F9CB244E052F00FF366A /* SenderMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */; };
 		BD90F9CD244E066600FF366A /* SenderImageMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CC244E066600FF366A /* SenderImageMessageViewCell.swift */; };
-		BD90F9CF244E068500FF366A /* MyTextMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CE244E068500FF366A /* MyTextMessageViewCell.swift */; };
+		BD90F9CF244E068500FF366A /* OutgoingTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CE244E068500FF366A /* OutgoingTextMessageCell.swift */; };
 		BD90F9D1244E069500FF366A /* MyImageMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9D0244E069500FF366A /* MyImageMessageViewCell.swift */; };
 		BD99260724979115007858B8 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99260624979115007858B8 /* ChatPresenter.swift */; };
 		BD99260B24979464007858B8 /* AuthCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99260A24979464007858B8 /* AuthCode.swift */; };
@@ -46,6 +52,12 @@
 		BD17050024851CDD00FD84FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD41D9BC2490F145009AB858 /* LoginEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailController.swift; sourceTree = "<group>"; };
 		BD41D9BF2490F3A0009AB858 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		BD491FCD249CCD1B004E083E /* BaseMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessage.swift; sourceTree = "<group>"; };
+		BD491FCF249CCD84004E083E /* TextMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
+		BD491FD1249CCE16004E083E /* ImageMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
+		BD491FD3249CD1C0004E083E /* BaseMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessageViewCell.swift; sourceTree = "<group>"; };
+		BD491FD5249CD574004E083E /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		BD491FD8249CDAB4004E083E /* FirestoreHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreHelper.swift; sourceTree = "<group>"; };
 		BD693EDE245843810093F643 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BD693EE1245844130093F643 /* BaseStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStoryBoard.swift; sourceTree = "<group>"; };
 		BD693EE3245845660093F643 /* MainStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryBoard.swift; sourceTree = "<group>"; };
@@ -58,7 +70,7 @@
 		BD90F9C7244E04FC00FF366A /* SenderTextMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderTextMessageViewCell.swift; sourceTree = "<group>"; };
 		BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderMessageItem.swift; sourceTree = "<group>"; };
 		BD90F9CC244E066600FF366A /* SenderImageMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderImageMessageViewCell.swift; sourceTree = "<group>"; };
-		BD90F9CE244E068500FF366A /* MyTextMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextMessageViewCell.swift; sourceTree = "<group>"; };
+		BD90F9CE244E068500FF366A /* OutgoingTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextMessageCell.swift; sourceTree = "<group>"; };
 		BD90F9D0244E069500FF366A /* MyImageMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageMessageViewCell.swift; sourceTree = "<group>"; };
 		BD99260624979115007858B8 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
 		BD99260A24979464007858B8 /* AuthCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCode.swift; sourceTree = "<group>"; };
@@ -112,6 +124,14 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		BD491FD7249CDAA4004E083E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BD491FD8249CDAB4004E083E /* FirestoreHelper.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		BD693EE0245843FE0093F643 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +164,7 @@
 			children = (
 				BD73BA992493A78A001A62D6 /* Channel.swift */,
 				BD99260A24979464007858B8 /* AuthCode.swift */,
+				BD491FD5249CD574004E083E /* MessageType.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -174,6 +195,9 @@
 			children = (
 				BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */,
 				BD72D17624516C2700DC1B10 /* Location.swift */,
+				BD491FCD249CCD1B004E083E /* BaseMessage.swift */,
+				BD491FCF249CCD84004E083E /* TextMessage.swift */,
+				BD491FD1249CCE16004E083E /* ImageMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,8 +207,9 @@
 			children = (
 				BD90F9C7244E04FC00FF366A /* SenderTextMessageViewCell.swift */,
 				BD90F9CC244E066600FF366A /* SenderImageMessageViewCell.swift */,
-				BD90F9CE244E068500FF366A /* MyTextMessageViewCell.swift */,
+				BD90F9CE244E068500FF366A /* OutgoingTextMessageCell.swift */,
 				BD90F9D0244E069500FF366A /* MyImageMessageViewCell.swift */,
+				BD491FD3249CD1C0004E083E /* BaseMessageViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -218,6 +243,7 @@
 		BDC90784244A0353008C041C /* iChatter */ = {
 			isa = PBXGroup;
 			children = (
+				BD491FD7249CDAA4004E083E /* Network */,
 				BD73BA982493A770001A62D6 /* Constant */,
 				BD1704FF2485197200FD84FE /* iChatter.entitlements */,
 				BD693EE724584AD30093F643 /* Storyboard */,
@@ -392,19 +418,25 @@
 				BDC9078A244A0354008C041C /* LoginViewController.swift in Sources */,
 				BD693EDF245843810093F643 /* ChatViewController.swift in Sources */,
 				BDC90786244A0354008C041C /* AppDelegate.swift in Sources */,
+				BD491FD2249CCE16004E083E /* ImageMessage.swift in Sources */,
 				BD693EE4245845660093F643 /* MainStoryBoard.swift in Sources */,
 				BD99260724979115007858B8 /* ChatPresenter.swift in Sources */,
 				BD73BA9724939439001A62D6 /* RegisterSuccessController.swift in Sources */,
-				BD90F9CF244E068500FF366A /* MyTextMessageViewCell.swift in Sources */,
+				BD90F9CF244E068500FF366A /* OutgoingTextMessageCell.swift in Sources */,
 				BD72D17724516C2700DC1B10 /* Location.swift in Sources */,
 				BD41D9BD2490F145009AB858 /* LoginEmailController.swift in Sources */,
 				BD693EE2245844130093F643 /* BaseStoryBoard.swift in Sources */,
 				BD41D9C02490F3A0009AB858 /* RegisterViewController.swift in Sources */,
 				BD90F9CD244E066600FF366A /* SenderImageMessageViewCell.swift in Sources */,
+				BD491FD6249CD574004E083E /* MessageType.swift in Sources */,
+				BD491FD0249CCD84004E083E /* TextMessage.swift in Sources */,
 				BD00771924812CD700171B2F /* LoginPresenter.swift in Sources */,
 				BD90F9CB244E052F00FF366A /* SenderMessageItem.swift in Sources */,
+				BD491FD9249CDAB4004E083E /* FirestoreHelper.swift in Sources */,
 				BDC90788244A0354008C041C /* SceneDelegate.swift in Sources */,
+				BD491FCE249CCD1B004E083E /* BaseMessage.swift in Sources */,
 				BD99260B24979464007858B8 /* AuthCode.swift in Sources */,
+				BD491FD4249CD1C0004E083E /* BaseMessageViewCell.swift in Sources */,
 				BD72D17A24516CFA00DC1B10 /* LocationsStorage.swift in Sources */,
 				BDEAD6EC248E531300740843 /* BaseViewController.swift in Sources */,
 				BD90F9C8244E04FC00FF366A /* SenderTextMessageViewCell.swift in Sources */,

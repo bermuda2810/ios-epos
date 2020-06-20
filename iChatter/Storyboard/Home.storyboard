@@ -19,8 +19,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_flipped_background" translatesAutoresizingMaskIntoConstraints="NO" id="3m5-bv-jDd" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="LcS-an-EJ7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="606"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="LcS-an-EJ7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="621"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="O65-ZY-y1u" customClass="SenderTextMessageViewCell" customModule="iChatter" customModuleProvider="target">
@@ -134,7 +134,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="5IF-BQ-tUF" customClass="MyTextMessageViewCell" customModule="iChatter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OutgoingTextMessageCell" rowHeight="70" id="5IF-BQ-tUF" customClass="OutgoingTextMessageCell" customModule="iChatter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="285.5" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5IF-BQ-tUF" id="Qm7-Q0-MAJ">
@@ -147,11 +147,17 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_single_message" translatesAutoresizingMaskIntoConstraints="NO" id="nGY-9n-E5V" userLabel="Background Message">
                                                             <rect key="frame" x="144.5" y="28" width="220.5" height="42"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mx-xW-MoZ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mx-xW-MoZ">
                                                             <rect key="frame" x="161.5" y="40" width="186.5" height="18"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2I-nz-dXD" userLabel="Timestamp">
+                                                            <rect key="frame" x="95.5" y="52" width="39" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -159,11 +165,14 @@
                                                     <constraints>
                                                         <constraint firstItem="nGY-9n-E5V" firstAttribute="bottom" secondItem="7Mx-xW-MoZ" secondAttribute="bottom" constant="12" id="2go-F6-fqL"/>
                                                         <constraint firstItem="nGY-9n-E5V" firstAttribute="top" secondItem="81u-YQ-L7o" secondAttribute="top" constant="28" id="4z1-fY-yfK"/>
+                                                        <constraint firstItem="e2I-nz-dXD" firstAttribute="bottom" secondItem="nGY-9n-E5V" secondAttribute="bottom" id="QH3-Wy-LZb"/>
                                                         <constraint firstAttribute="trailing" secondItem="nGY-9n-E5V" secondAttribute="trailing" constant="10" id="TwT-WY-ZMx"/>
+                                                        <constraint firstItem="e2I-nz-dXD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="81u-YQ-L7o" secondAttribute="leading" constant="30" id="cBD-yT-EOs"/>
                                                         <constraint firstAttribute="bottom" secondItem="nGY-9n-E5V" secondAttribute="bottom" id="hA1-CT-nCn"/>
                                                         <constraint firstItem="nGY-9n-E5V" firstAttribute="trailing" secondItem="7Mx-xW-MoZ" secondAttribute="trailing" constant="17" id="l5c-HU-r30"/>
                                                         <constraint firstItem="nGY-9n-E5V" firstAttribute="top" secondItem="7Mx-xW-MoZ" secondAttribute="top" constant="-12" id="sFw-Ld-GyO"/>
                                                         <constraint firstItem="nGY-9n-E5V" firstAttribute="leading" secondItem="7Mx-xW-MoZ" secondAttribute="leading" constant="-17" id="xsM-Cx-P5p"/>
+                                                        <constraint firstItem="nGY-9n-E5V" firstAttribute="leading" secondItem="e2I-nz-dXD" secondAttribute="trailing" constant="10" id="zgu-Yj-okg"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -176,6 +185,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="lblContent" destination="7Mx-xW-MoZ" id="cNe-mV-85w"/>
+                                            <outlet property="lblTimestamp" destination="e2I-nz-dXD" id="4V1-Vw-FcD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="d7g-UW-EeG" customClass="MyImageMessageViewCell" customModule="iChatter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="355.5" width="375" height="160"/>
@@ -215,7 +228,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMR-o5-wgL" userLabel="Message Control">
-                                <rect key="frame" x="0.0" y="606" width="375" height="46"/>
+                                <rect key="frame" x="0.0" y="621" width="375" height="46"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKL-kF-iNU" userLabel="Camera Button">
                                         <rect key="frame" x="9" y="11" width="25" height="24"/>
@@ -308,7 +321,7 @@
                             <constraint firstItem="Kav-WL-NyE" firstAttribute="leading" secondItem="9Jj-D7-nX9" secondAttribute="leading" id="0a7-dQ-yFS"/>
                             <constraint firstAttribute="trailing" secondItem="Kav-WL-NyE" secondAttribute="trailing" id="63h-0U-8uz"/>
                             <constraint firstAttribute="bottom" secondItem="3m5-bv-jDd" secondAttribute="bottom" id="969-sN-YY6"/>
-                            <constraint firstAttribute="bottom" secondItem="jMR-o5-wgL" secondAttribute="bottom" constant="15" id="BQ0-WX-L9H"/>
+                            <constraint firstItem="e0A-JG-fmy" firstAttribute="bottom" secondItem="jMR-o5-wgL" secondAttribute="bottom" id="BQ0-WX-L9H"/>
                             <constraint firstAttribute="trailing" secondItem="3m5-bv-jDd" secondAttribute="trailing" id="DMc-RG-jOB"/>
                             <constraint firstItem="3m5-bv-jDd" firstAttribute="top" secondItem="e0A-JG-fmy" secondAttribute="top" id="F0I-nN-XPl"/>
                             <constraint firstItem="Kav-WL-NyE" firstAttribute="bottom" secondItem="9Jj-D7-nX9" secondAttribute="bottom" constant="200" id="Is7-nf-gWJ"/>
@@ -324,6 +337,8 @@
                     </view>
                     <connections>
                         <outlet property="cstBottomMargin" destination="BQ0-WX-L9H" id="JI7-YB-iJ5"/>
+                        <outlet property="edtTextMessage" destination="jWZ-2Q-uyx" id="VQa-hU-BCs"/>
+                        <outlet property="tblChat" destination="LcS-an-EJ7" id="YFz-0i-bqB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdS-Bn-3GQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

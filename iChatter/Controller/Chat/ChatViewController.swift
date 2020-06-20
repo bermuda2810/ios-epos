@@ -7,22 +7,34 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatViewController: BaseViewController {
     
     private var presenter : ChatPresenter!
+    @IBOutlet weak var tblChat: UITableView!
     
+    @IBOutlet weak var edtTextMessage: UITextField!
     @IBOutlet weak var cstBottomMargin: NSLayoutConstraint!
     private var heightTabbar : Int = 0
+    private var me : String!
+    private var messages : Array<BaseMessage> = Array()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = ChatPresenter(view: self)
+        tblChat.delegate = self
+        tblChat.dataSource = self
     }
     
     @IBAction func onSendPressed(_ sender: Any) {
-        presenter.sendMessage(message: "VietBQ")
-//        presenter.readMessages()
+        presenter.sendTextMessage(message: edtTextMessage.text)
+        clearTextChat()
+    }
+    
+    private func clearTextChat() {
+        edtTextMessage.text = ""
+        edtTextMessage.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,20 +90,10 @@ class ChatViewController: BaseViewController {
                self.view.layoutIfNeeded()
            })
        }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ChatViewController : ChatView {
+    
     func onStartingSendMessage(message: String) {
         
     }
@@ -100,8 +102,11 @@ extension ChatViewController : ChatView {
         
     }
     
-    func onMessageSent(message: String) {
-        
+    func onMessageSent(message: BaseMessage) {
+        messages.append(message)
+        message.indexMessage = messages.count - 1
+        let indexPath = IndexPath.init(item: message.indexMessage, section: 0)
+        tblChat.insertRows(at: [indexPath], with: .fade)
     }
     
     func onTypingEvent(event: Int) {
@@ -110,5 +115,20 @@ extension ChatViewController : ChatView {
     
     func onError(message: String) {
         
+    }
+}
+
+
+extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: message.cellIdentifier) as! BaseMessageViewCell
+        cell.bindData(message: message)
+        return cell
     }
 }

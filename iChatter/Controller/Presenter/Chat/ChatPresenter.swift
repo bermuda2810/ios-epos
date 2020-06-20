@@ -12,7 +12,7 @@ import Firebase
 protocol ChatView {
     func onStartingSendMessage(message : String)
     func onReceiveMessage(message : String)
-    func onMessageSent(message : String)
+    func onMessageSent(message : BaseMessage)
     func onTypingEvent(event : Int)
     func onError(message : String)
 }
@@ -28,22 +28,25 @@ class ChatPresenter: NSObject {
         self.listenIncomingMessage()
     }
     
-    func sendMessage(message : String) {
+    func sendTextMessage(message : String?) {
+        if message == nil {
+            return
+        }
+        let sender = Firebase.Auth.auth().currentUser?.uid
         
-        var ref: DocumentReference? = nil
-        ref = firestore.collection("messages").addDocument(data: [
-            "first": "Ada",
-            "last": "Lovelace",
-            "born": 1815,
-            "message": message
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
+        let textMessage = TextMessage()
+        textMessage.sender = sender!
+        textMessage.content = message!
+        textMessage.timestamp = Date.init().timeIntervalSinceNow
+        textMessage.cellIdentifier = "OutgoingTextMessageCell"
+        
+        FirestoreHelper(firestore).sendTextMessage(message: textMessage, completion: { [unowned self] (message) in
+            self.view.onMessageSent(message: message)
+        }) { [unowned self] (errorMessage) in
+            self.view.onError(message: errorMessage)
         }
     }
+
     
     func readMessages() {
         firestore.collection("messages").getDocuments { (query, error) in
@@ -52,19 +55,22 @@ class ChatPresenter: NSObject {
             }else {
                 for document in query!.documents {
                     let data = document.data()
-                    print(data["first"] as! String)
+//                    print(data["first"] as! String)
                 }
             }
         }
+        
     }
     
     private func listenIncomingMessage() {
-        print("I'm listening new message")
         firestore.collection("messages").addSnapshotListener(includeMetadataChanges: true) { (query, error) in
-            for document in query!.documents {
-                let data = document.data()
-                print(data["message"] as! String)
-            }
+//            print("Count \(query!.documents.count)")
+//            for document in query!.documents {
+//                let data = document.data()
+//                print("Sender ID : \(data["sender"] as! String)")
+//                print(data["message"] as! String)
+//            }
         }
+        
     }
 }
