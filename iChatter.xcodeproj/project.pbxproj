@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BD00771924812CD700171B2F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD00771824812CD700171B2F /* LoginPresenter.swift */; };
 		BD17050124851CDE00FD84FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD17050024851CDD00FD84FE /* GoogleService-Info.plist */; };
+		BD1AA63824A0CEC8005E8F89 /* Identifider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1AA63724A0CEC8005E8F89 /* Identifider.swift */; };
+		BD1AA63B24A0D2F1005E8F89 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1AA63A24A0D2F1005E8F89 /* DateExtension.swift */; };
 		BD41D9BD2490F145009AB858 /* LoginEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD41D9BC2490F145009AB858 /* LoginEmailController.swift */; };
 		BD41D9C02490F3A0009AB858 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD41D9BF2490F3A0009AB858 /* RegisterViewController.swift */; };
 		BD491FCE249CCD1B004E083E /* BaseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD491FCD249CCD1B004E083E /* BaseMessage.swift */; };
@@ -26,7 +28,7 @@
 		BD73BA9724939439001A62D6 /* RegisterSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA9624939439001A62D6 /* RegisterSuccessController.swift */; };
 		BD73BA9A2493A78A001A62D6 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA992493A78A001A62D6 /* Channel.swift */; };
 		BD90F9C3244C991C00FF366A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD90F9C2244C991C00FF366A /* Home.storyboard */; };
-		BD90F9C8244E04FC00FF366A /* SenderTextMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9C7244E04FC00FF366A /* SenderTextMessageViewCell.swift */; };
+		BD90F9C8244E04FC00FF366A /* IncommingTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9C7244E04FC00FF366A /* IncommingTextMessageCell.swift */; };
 		BD90F9CB244E052F00FF366A /* SenderMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */; };
 		BD90F9CD244E066600FF366A /* SenderImageMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CC244E066600FF366A /* SenderImageMessageViewCell.swift */; };
 		BD90F9CF244E068500FF366A /* OutgoingTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CE244E068500FF366A /* OutgoingTextMessageCell.swift */; };
@@ -50,6 +52,8 @@
 		BD00771824812CD700171B2F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		BD1704FF2485197200FD84FE /* iChatter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iChatter.entitlements; sourceTree = "<group>"; };
 		BD17050024851CDD00FD84FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BD1AA63724A0CEC8005E8F89 /* Identifider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifider.swift; sourceTree = "<group>"; };
+		BD1AA63A24A0D2F1005E8F89 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		BD41D9BC2490F145009AB858 /* LoginEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailController.swift; sourceTree = "<group>"; };
 		BD41D9BF2490F3A0009AB858 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BD491FCD249CCD1B004E083E /* BaseMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessage.swift; sourceTree = "<group>"; };
@@ -67,7 +71,7 @@
 		BD73BA9624939439001A62D6 /* RegisterSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessController.swift; sourceTree = "<group>"; };
 		BD73BA992493A78A001A62D6 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		BD90F9C2244C991C00FF366A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		BD90F9C7244E04FC00FF366A /* SenderTextMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderTextMessageViewCell.swift; sourceTree = "<group>"; };
+		BD90F9C7244E04FC00FF366A /* IncommingTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncommingTextMessageCell.swift; sourceTree = "<group>"; };
 		BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderMessageItem.swift; sourceTree = "<group>"; };
 		BD90F9CC244E066600FF366A /* SenderImageMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderImageMessageViewCell.swift; sourceTree = "<group>"; };
 		BD90F9CE244E068500FF366A /* OutgoingTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextMessageCell.swift; sourceTree = "<group>"; };
@@ -115,6 +119,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		BD1AA63924A0D2E3005E8F89 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BD1AA63A24A0D2F1005E8F89 /* DateExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BD41D9BE2490F390009AB858 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,19 +144,12 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		BD693EE0245843FE0093F643 /* Helper */ = {
+		BD693EE724584AD30093F643 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				BD693EE1245844130093F643 /* BaseStoryBoard.swift */,
 				BD693EE3245845660093F643 /* MainStoryBoard.swift */,
 				BD693EE5245845840093F643 /* HomeStoryBoard.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		BD693EE724584AD30093F643 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
 				BDC9078B244A0354008C041C /* Main.storyboard */,
 				BD90F9C2244C991C00FF366A /* Home.storyboard */,
 			);
@@ -165,6 +170,7 @@
 				BD73BA992493A78A001A62D6 /* Channel.swift */,
 				BD99260A24979464007858B8 /* AuthCode.swift */,
 				BD491FD5249CD574004E083E /* MessageType.swift */,
+				BD1AA63724A0CEC8005E8F89 /* Identifider.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -173,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				BD41D9BE2490F390009AB858 /* Register */,
-				BDEAD6EA248E526E00740843 /* Presenter */,
 				BD00771524812BAC00171B2F /* Login */,
 				BD90F9C5244E049B00FF366A /* Chat */,
 				BDEAD6EB248E531300740843 /* BaseViewController.swift */,
@@ -186,6 +191,7 @@
 			children = (
 				BD90F9C9244E050A00FF366A /* Cell */,
 				BD693EDE245843810093F643 /* ChatViewController.swift */,
+				BD99260624979115007858B8 /* ChatPresenter.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -205,21 +211,13 @@
 		BD90F9C9244E050A00FF366A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				BD90F9C7244E04FC00FF366A /* SenderTextMessageViewCell.swift */,
+				BD90F9C7244E04FC00FF366A /* IncommingTextMessageCell.swift */,
 				BD90F9CC244E066600FF366A /* SenderImageMessageViewCell.swift */,
 				BD90F9CE244E068500FF366A /* OutgoingTextMessageCell.swift */,
 				BD90F9D0244E069500FF366A /* MyImageMessageViewCell.swift */,
 				BD491FD3249CD1C0004E083E /* BaseMessageViewCell.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		BD992605249790FB007858B8 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				BD99260624979115007858B8 /* ChatPresenter.swift */,
-			);
-			path = Chat;
 			sourceTree = "<group>";
 		};
 		BDC90779244A0353008C041C = {
@@ -243,11 +241,11 @@
 		BDC90784244A0353008C041C /* iChatter */ = {
 			isa = PBXGroup;
 			children = (
+				BD1AA63924A0D2E3005E8F89 /* Extension */,
 				BD491FD7249CDAA4004E083E /* Network */,
 				BD73BA982493A770001A62D6 /* Constant */,
 				BD1704FF2485197200FD84FE /* iChatter.entitlements */,
 				BD693EE724584AD30093F643 /* Storyboard */,
-				BD693EE0245843FE0093F643 /* Helper */,
 				BD72D17824516CEB00DC1B10 /* Storage */,
 				BD90F9C6244E04A700FF366A /* Model */,
 				BD90F9C4244E049500FF366A /* Controller */,
@@ -259,14 +257,6 @@
 				BDC90793244A035E008C041C /* Info.plist */,
 			);
 			path = iChatter;
-			sourceTree = "<group>";
-		};
-		BDEAD6EA248E526E00740843 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				BD992605249790FB007858B8 /* Chat */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		F9D7F2464F3F180CE1B66578 /* Pods */ = {
@@ -414,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD90F9D1244E069500FF366A /* MyImageMessageViewCell.swift in Sources */,
+				BD1AA63B24A0D2F1005E8F89 /* DateExtension.swift in Sources */,
 				BD73BA9A2493A78A001A62D6 /* Channel.swift in Sources */,
 				BDC9078A244A0354008C041C /* LoginViewController.swift in Sources */,
 				BD693EDF245843810093F643 /* ChatViewController.swift in Sources */,
@@ -422,6 +413,7 @@
 				BD693EE4245845660093F643 /* MainStoryBoard.swift in Sources */,
 				BD99260724979115007858B8 /* ChatPresenter.swift in Sources */,
 				BD73BA9724939439001A62D6 /* RegisterSuccessController.swift in Sources */,
+				BD1AA63824A0CEC8005E8F89 /* Identifider.swift in Sources */,
 				BD90F9CF244E068500FF366A /* OutgoingTextMessageCell.swift in Sources */,
 				BD72D17724516C2700DC1B10 /* Location.swift in Sources */,
 				BD41D9BD2490F145009AB858 /* LoginEmailController.swift in Sources */,
@@ -439,7 +431,7 @@
 				BD491FD4249CD1C0004E083E /* BaseMessageViewCell.swift in Sources */,
 				BD72D17A24516CFA00DC1B10 /* LocationsStorage.swift in Sources */,
 				BDEAD6EC248E531300740843 /* BaseViewController.swift in Sources */,
-				BD90F9C8244E04FC00FF366A /* SenderTextMessageViewCell.swift in Sources */,
+				BD90F9C8244E04FC00FF366A /* IncommingTextMessageCell.swift in Sources */,
 				BD693EE6245845840093F643 /* HomeStoryBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

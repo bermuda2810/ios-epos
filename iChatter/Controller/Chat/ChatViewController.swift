@@ -16,6 +16,7 @@ class ChatViewController: BaseViewController {
     
     @IBOutlet weak var edtTextMessage: UITextField!
     @IBOutlet weak var cstBottomMargin: NSLayoutConstraint!
+    
     private var heightTabbar : Int = 0
     private var me : String!
     private var messages : Array<BaseMessage> = Array()
@@ -23,6 +24,7 @@ class ChatViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = ChatPresenter(view: self)
+        presenter.readMessages()
         tblChat.delegate = self
         tblChat.dataSource = self
     }
@@ -48,48 +50,16 @@ class ChatViewController: BaseViewController {
     }
     
     
-    func unregisterKeyboardView() {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidShowNotification, object: nil)
+    override func onKeyboardViewChanged(_ show : Bool,
+                         _ heightTabbar : Float,
+                         _  heightKeyboard : Float,
+                         _ animationTime : Double) {
+        let changeInHeight = (heightKeyboard - heightTabbar) * (show ? 1 : 0)
+        self.cstBottomMargin?.constant = CGFloat(changeInHeight)
+        UIView.animate(withDuration: animationTime, animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        })
     }
-    
-    func registerKeyboardView() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
-    }
-    
-    @objc func keyboardWillHide(_ notification:Notification) {
-           adjustingHeight(false, notification: notification)
-       }
-       
-       @objc func keyboardWillShow(_ notification:Notification) {
-           adjustingHeight(true, notification: notification)
-       }
-       
-       @objc func keyboardDidShow(_ notification:Notification) {
-           print("keyboardDidShow")
-       }
-       
-       @objc func keyboardWillChangeFrame(_ notification: Notification) {
-           adjustingHeight(false, notification: notification)
-       }
-    
-    
-    func adjustingHeight(_ show:Bool, notification:Notification) {
-           let userInfo = (notification as NSNotification).userInfo!
-           let keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-           let animationDurarion = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
-           let heightTabbar = self.tabBarController != nil ? self.tabBarController?.tabBar.frame.size.height : 0
-           let changeInHeight = (keyboardFrame.size.height - heightTabbar!) * (show ? 1 : 0)
-           self.cstBottomMargin?.constant = changeInHeight
-           UIView.animate(withDuration: animationDurarion, animations: { () -> Void in
-               self.view.layoutIfNeeded()
-           })
-       }
 }
 
 extension ChatViewController : ChatView {
@@ -98,8 +68,12 @@ extension ChatViewController : ChatView {
         
     }
     
+    func onLoadMessages(messages: Array<BaseMessage>) {
+        self.messages = messages
+        self.tblChat.reloadData()
+    }
+    
     func onReceiveMessage(message: String) {
-        
     }
     
     func onMessageSent(message: BaseMessage) {
