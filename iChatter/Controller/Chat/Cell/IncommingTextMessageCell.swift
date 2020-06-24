@@ -12,7 +12,7 @@ class IncommingTextMessageCell: BaseMessageViewCell {
     
     @IBOutlet weak var lblContent: UILabel!
     
-    func bindData(message : SenderMessageItem)  {
+    override func bindData(message : BaseMessage)  {
         let textMessage = message as! TextMessage
         lblContent.text = textMessage.content
     }

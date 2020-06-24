@@ -23,7 +23,6 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor : UIColor.black // Only for title
         ]
-        // Do any additional setup after loading the view.
     }
     
     
@@ -37,7 +36,6 @@ class BaseViewController: UIViewController {
     func hideWaitingDialog() {
         hud?.dismiss()
     }
-    
     
     func postNotificationCenter(channel : String, data : Any?) {
         var notification : Notification = Notification(name: Notification.Name.init(rawValue: channel))
@@ -71,6 +69,7 @@ class BaseViewController: UIViewController {
     
     @objc func keyboardDidShow(_ notification:Notification) {
         print("keyboardDidShow")
+        self.onKeyboardDidShow()
     }
     
     @objc func keyboardWillChangeFrame(_ notification: Notification) {
@@ -84,9 +83,9 @@ class BaseViewController: UIViewController {
         let heightTabbar = self.tabBarController != nil ? self.tabBarController?.tabBar.frame.size.height : 0
         
         self.onKeyboardViewChanged(show,
-                             Float(heightTabbar!),
-                             Float(keyboardFrame.size.height),
-                            animationDurarion)
+                                   Float(heightTabbar!),
+                                   Float(keyboardFrame.size.height),
+                                   animationDurarion)
     }
     
     
@@ -94,18 +93,12 @@ class BaseViewController: UIViewController {
      @show : Bool When keyboard is showing that show is true and otherwise
      */
     func onKeyboardViewChanged(_ show:Bool,
-                         _ heightTabbar : Float,
-                         _  heightKeyboard : Float,
-                         _ animationTime : Double) {
+                               _ heightTabbar : Float,
+                               _  heightKeyboard : Float,
+                               _ animationTime : Double) {
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
+    func onKeyboardDidShow() {
+        
+    }
 }

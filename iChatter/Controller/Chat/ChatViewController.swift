@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import IQKeyboardManagerSwift
 
 class ChatViewController: BaseViewController {
     
     private var presenter : ChatPresenter!
     @IBOutlet weak var tblChat: UITableView!
+    @IBOutlet weak var imgBackground: UIImageView!
     
     @IBOutlet weak var edtTextMessage: UITextField!
     @IBOutlet weak var cstBottomMargin: NSLayoutConstraint!
@@ -27,11 +29,17 @@ class ChatViewController: BaseViewController {
         presenter.readMessages()
         tblChat.delegate = self
         tblChat.dataSource = self
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onTapped))
+        tblChat.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func onTapped() {
+        clearTextChat()
     }
     
     @IBAction func onSendPressed(_ sender: Any) {
         presenter.sendTextMessage(message: edtTextMessage.text)
-        clearTextChat()
+        edtTextMessage.text = ""
     }
     
     private func clearTextChat() {
@@ -60,9 +68,23 @@ class ChatViewController: BaseViewController {
             self.view.layoutIfNeeded()
         })
     }
+    
+    override func onKeyboardDidShow() {
+        let lastIndexPath = IndexPath(row: messages.count - 1, section: 0)
+        tblChat.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
+    }
 }
 
 extension ChatViewController : ChatView {
+    
+    func onReceiveMessages(messages: Array<BaseMessage>, indexPaths: Array<IndexPath>) {
+        self.messages = messages
+        tblChat.insertRows(at: indexPaths, with: .fade)
+        if indexPaths.count == 0 {
+            return
+        }
+        tblChat.scrollToRow(at: indexPaths.last!, at: .bottom, animated: true)
+    }
     
     func onStartingSendMessage(message: String) {
         
@@ -71,11 +93,11 @@ extension ChatViewController : ChatView {
     func onLoadMessages(messages: Array<BaseMessage>) {
         self.messages = messages
         self.tblChat.reloadData()
+        let indexPath = IndexPath.init(item: self.messages.count - 1, section: 0)
+        tblChat.scrollToRow(at: indexPath, at: .bottom, animated: false)
     }
     
-    func onReceiveMessage(message: String) {
-    }
-    
+
     func onMessageSent(message: BaseMessage) {
         messages.append(message)
         message.indexMessage = messages.count - 1
