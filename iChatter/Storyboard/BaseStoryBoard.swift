@@ -16,7 +16,7 @@ class BaseStoryBoard {
         return UIStoryboard(name: storyboardName, bundle: nil).instantiateInitialViewController()!
     }
     
-    public func getViewControllerByIdentifier(identifier : String) -> UIViewController {
+    public func getControllerByStoryboardID(identifier : String) -> UIViewController {
         let storyboardName = self.storyBoardName()
         return UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: identifier)
     }

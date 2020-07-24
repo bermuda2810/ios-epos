@@ -43,6 +43,8 @@
 		BDC9078F244A035E008C041C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC9078E244A035E008C041C /* Assets.xcassets */; };
 		BDC90792244A035E008C041C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC90790244A035E008C041C /* LaunchScreen.storyboard */; };
 		BDEAD6EC248E531300740843 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEAD6EB248E531300740843 /* BaseViewController.swift */; };
+		BDEE72B424CAA99500362133 /* RootPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE72B324CAA99500362133 /* RootPagingViewController.swift */; };
+		BDEE72B624CAADA500362133 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE72B524CAADA500362133 /* PageViewController.swift */; };
 		FA284CB6BE92441EDA4F72EC /* Pods_iChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93800A00F2ECF7C2047AFEB /* Pods_iChatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,7 @@
 		BD93EEE024A37ABE00DE7F1B /* ParseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		BD99260624979115007858B8 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
 		BD99260A24979464007858B8 /* AuthCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCode.swift; sourceTree = "<group>"; };
+		BDADAC9924C1C856008D89E3 /* iChatterDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iChatterDebug.entitlements; sourceTree = "<group>"; };
 		BDC90782244A0353008C041C /* iChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC90785244A0354008C041C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDC90787244A0354008C041C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 		BDC90791244A035E008C041C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDC90793244A035E008C041C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDEAD6EB248E531300740843 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BDEE72B324CAA99500362133 /* RootPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPagingViewController.swift; sourceTree = "<group>"; };
+		BDEE72B524CAADA500362133 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +186,7 @@
 		BD90F9C4244E049500FF366A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BDEE72B224CAA97500362133 /* Paging */,
 				BD41D9BE2490F390009AB858 /* Register */,
 				BD00771524812BAC00171B2F /* Login */,
 				BD90F9C5244E049B00FF366A /* Chat */,
@@ -244,6 +250,7 @@
 		BDC90784244A0353008C041C /* iChatter */ = {
 			isa = PBXGroup;
 			children = (
+				BDADAC9924C1C856008D89E3 /* iChatterDebug.entitlements */,
 				BD1AA63924A0D2E3005E8F89 /* Extension */,
 				BD491FD7249CDAA4004E083E /* Network */,
 				BD73BA982493A770001A62D6 /* Constant */,
@@ -260,6 +267,15 @@
 				BDC90793244A035E008C041C /* Info.plist */,
 			);
 			path = iChatter;
+			sourceTree = "<group>";
+		};
+		BDEE72B224CAA97500362133 /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE72B324CAA99500362133 /* RootPagingViewController.swift */,
+				BDEE72B524CAADA500362133 /* PageViewController.swift */,
+			);
+			path = Paging;
 			sourceTree = "<group>";
 		};
 		F9D7F2464F3F180CE1B66578 /* Pods */ = {
@@ -424,11 +440,13 @@
 				BD41D9C02490F3A0009AB858 /* RegisterViewController.swift in Sources */,
 				BD90F9CD244E066600FF366A /* SenderImageMessageViewCell.swift in Sources */,
 				BD491FD6249CD574004E083E /* MessageType.swift in Sources */,
+				BDEE72B424CAA99500362133 /* RootPagingViewController.swift in Sources */,
 				BD491FD0249CCD84004E083E /* TextMessage.swift in Sources */,
 				BD00771924812CD700171B2F /* LoginPresenter.swift in Sources */,
 				BD90F9CB244E052F00FF366A /* SenderMessageItem.swift in Sources */,
 				BD491FD9249CDAB4004E083E /* FirestoreHelper.swift in Sources */,
 				BDC90788244A0354008C041C /* SceneDelegate.swift in Sources */,
+				BDEE72B624CAADA500362133 /* PageViewController.swift in Sources */,
 				BD93EEE124A37ABE00DE7F1B /* ParseHelper.swift in Sources */,
 				BD491FCE249CCD1B004E083E /* BaseMessage.swift in Sources */,
 				BD99260B24979464007858B8 /* AuthCode.swift in Sources */,
@@ -581,7 +599,7 @@
 			baseConfigurationReference = 7BFA620165862BB32AD3B2CB /* Pods-iChatter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = iChatter/iChatter.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iChatter/iChatterDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5Q8584KE5;
@@ -591,7 +609,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = class.iChatter;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.testing.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -614,7 +632,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = class.iChatter;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.testing.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = dev1_provisioning_iChatter;
 				SWIFT_VERSION = 5.0;

@@ -54,7 +54,7 @@ class LoginViewController: BaseViewController {
 
     @IBAction func onRegisterPressed(_ sender: Any) {
 //        performSegue(withIdentifier: "segueShowRegisterScreen", sender: nil)
-        let registerVC = MainStoryBoard.init().getViewControllerByIdentifier(identifier: "RegisterViewController")
+        let registerVC = MainStoryBoard.init().getControllerByStoryboardID(identifier: "RegisterViewController")
         self.navigationController?.pushViewController(registerVC, animated: true)
     }
     
