@@ -382,27 +382,47 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LfE-8u-5W1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="425"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EkV-Jg-PiM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="425"/>
+                                        <connections>
+                                            <segue destination="F6u-B7-d95" kind="embed" id="8sk-sk-WRt"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="EkV-Jg-PiM" firstAttribute="leading" secondItem="LfE-8u-5W1" secondAttribute="leading" id="7xn-Dy-Ifm"/>
+                                    <constraint firstAttribute="bottom" secondItem="EkV-Jg-PiM" secondAttribute="bottom" id="fci-x9-Dhd"/>
+                                    <constraint firstItem="EkV-Jg-PiM" firstAttribute="top" secondItem="LfE-8u-5W1" secondAttribute="top" id="n7E-zE-Jvq"/>
+                                    <constraint firstAttribute="trailing" secondItem="EkV-Jg-PiM" secondAttribute="trailing" id="tS7-cO-mzf"/>
+                                </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nfI-D5-P0I">
                                 <rect key="frame" x="0.0" y="637" width="375" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md5-YJ-6IH">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md5-YJ-6IH" customClass="UILocalizedButton" customModule="iChatter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.92549019610000005" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Previous">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="screenName" value="LocalizationPagingScreen"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onPreviousPressed:" destination="VIp-2m-mmf" eventType="touchUpInside" id="RtW-47-R09"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMA-JE-3MT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMA-JE-3MT" customClass="UILocalizedButton" customModule="iChatter" customModuleProvider="target">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
                                         <color key="backgroundColor" red="0.89411764709999997" green="0.42745098040000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Forward">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="screenName" value="LocalizationPagingScreen"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onForwardPressed:" destination="VIp-2m-mmf" eventType="touchUpInside" id="Kkd-Sx-NSE"/>
                                         </connections>
@@ -429,6 +449,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60e-Ee-sIl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-351.19999999999999" y="2014.5427286356824"/>
+        </scene>
+        <!--My Paging View Controller-->
+        <scene sceneID="bFa-4h-aKB">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="F6u-B7-d95" customClass="MyPagingViewController" customModule="iChatter" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOt-Qz-aXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="1905"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="Xf3-Rw-9OQ">
@@ -458,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sjd-Nk-RPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="731" y="2012"/>
+            <point key="canvasLocation" x="1428" y="2000"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="qos-KV-GHz">

@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             didFinishLaunchingWithOptions: launchOptions
         )
         
+        
 
 //        locationManager.delegate = self
 //        locationManager.allowsBackgroundLocationUpdates = true
@@ -45,8 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         
         FirebaseApp.configure()
-        
+        changeLang()
         return true
+    }
+    
+    private func changeLang() {
+        LanguageManager.shared.loadLanguages()
+        let languages = LanguageManager.shared.getLanguages()
+        LanguageManager.shared.changeLanguage(language: languages[1])
     }
 
     

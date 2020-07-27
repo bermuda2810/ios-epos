@@ -27,7 +27,21 @@
 		BD72D17A24516CFA00DC1B10 /* LocationsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72D17924516CFA00DC1B10 /* LocationsStorage.swift */; };
 		BD73BA9724939439001A62D6 /* RegisterSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA9624939439001A62D6 /* RegisterSuccessController.swift */; };
 		BD73BA9A2493A78A001A62D6 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73BA992493A78A001A62D6 /* Channel.swift */; };
-		BD90F9C3244C991C00FF366A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD90F9C2244C991C00FF366A /* Home.storyboard */; };
+		BD87FD9C24CED37000D63221 /* MyPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FD9B24CED37000D63221 /* MyPagingViewController.swift */; };
+		BD87FD9E24CEDE3600D63221 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FD9D24CEDE3600D63221 /* NetworkConfig.swift */; };
+		BD87FDA024CEDFDC00D63221 /* JsonCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FD9F24CEDFDC00D63221 /* JsonCode.swift */; };
+		BD87FDA224CEE04000D63221 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDA124CEE04000D63221 /* API.swift */; };
+		BD87FDA424CEE0E500D63221 /* ResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDA324CEE0E500D63221 /* ResponseCode.swift */; };
+		BD87FDAC24CEE6C400D63221 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD87FDAE24CEE6C400D63221 /* Home.storyboard */; };
+		BD87FDB724CEE89300D63221 /* UILocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDB624CEE89300D63221 /* UILocalizedLabel.swift */; };
+		BD87FDB924CEE8EB00D63221 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDB824CEE8EB00D63221 /* String+Localized.swift */; };
+		BD87FDBB24CEE97400D63221 /* UILocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDBA24CEE97400D63221 /* UILocalizedButton.swift */; };
+		BD87FDBE24CEE9F500D63221 /* PagingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDBD24CEE9F500D63221 /* PagingScreen.swift */; };
+		BD87FDC124CEEA4F00D63221 /* LocalizationPagingScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD87FDC324CEEA4F00D63221 /* LocalizationPagingScreen.strings */; };
+		BD87FDC724CEECCE00D63221 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDC624CEECCE00D63221 /* LanguageManager.swift */; };
+		BD87FDC924CEECF800D63221 /* LanguageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDC824CEECF800D63221 /* LanguageItem.swift */; };
+		BD87FDCC24CEF17600D63221 /* LocalizationMessage.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD87FDCE24CEF17600D63221 /* LocalizationMessage.strings */; };
+		BD87FDD224CEF43800D63221 /* BaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDD124CEF43800D63221 /* BaseTask.swift */; };
 		BD90F9C8244E04FC00FF366A /* IncommingTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9C7244E04FC00FF366A /* IncommingTextMessageCell.swift */; };
 		BD90F9CB244E052F00FF366A /* SenderMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */; };
 		BD90F9CD244E066600FF366A /* SenderImageMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CC244E066600FF366A /* SenderImageMessageViewCell.swift */; };
@@ -73,7 +87,25 @@
 		BD72D17924516CFA00DC1B10 /* LocationsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsStorage.swift; sourceTree = "<group>"; };
 		BD73BA9624939439001A62D6 /* RegisterSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessController.swift; sourceTree = "<group>"; };
 		BD73BA992493A78A001A62D6 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		BD90F9C2244C991C00FF366A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		BD87FD9B24CED37000D63221 /* MyPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPagingViewController.swift; sourceTree = "<group>"; };
+		BD87FD9D24CEDE3600D63221 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		BD87FD9F24CEDFDC00D63221 /* JsonCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonCode.swift; sourceTree = "<group>"; };
+		BD87FDA124CEE04000D63221 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BD87FDA324CEE0E500D63221 /* ResponseCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCode.swift; sourceTree = "<group>"; };
+		BD87FDAD24CEE6C400D63221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		BD87FDB624CEE89300D63221 /* UILocalizedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILocalizedLabel.swift; sourceTree = "<group>"; };
+		BD87FDB824CEE8EB00D63221 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		BD87FDBA24CEE97400D63221 /* UILocalizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILocalizedButton.swift; sourceTree = "<group>"; };
+		BD87FDBD24CEE9F500D63221 /* PagingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScreen.swift; sourceTree = "<group>"; };
+		BD87FDC224CEEA4F00D63221 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizationPagingScreen.strings; sourceTree = "<group>"; };
+		BD87FDC424CEEA5100D63221 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LocalizationPagingScreen.strings; sourceTree = "<group>"; };
+		BD87FDC524CEEA5200D63221 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LocalizationPagingScreen.strings; sourceTree = "<group>"; };
+		BD87FDC624CEECCE00D63221 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		BD87FDC824CEECF800D63221 /* LanguageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageItem.swift; sourceTree = "<group>"; };
+		BD87FDCD24CEF17600D63221 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizationMessage.strings; sourceTree = "<group>"; };
+		BD87FDCF24CEF17900D63221 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LocalizationMessage.strings; sourceTree = "<group>"; };
+		BD87FDD024CEF17A00D63221 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LocalizationMessage.strings; sourceTree = "<group>"; };
+		BD87FDD124CEF43800D63221 /* BaseTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTask.swift; sourceTree = "<group>"; };
 		BD90F9C7244E04FC00FF366A /* IncommingTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncommingTextMessageCell.swift; sourceTree = "<group>"; };
 		BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderMessageItem.swift; sourceTree = "<group>"; };
 		BD90F9CC244E066600FF366A /* SenderImageMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderImageMessageViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +180,11 @@
 			children = (
 				BD491FD8249CDAB4004E083E /* FirestoreHelper.swift */,
 				BD93EEE024A37ABE00DE7F1B /* ParseHelper.swift */,
+				BD87FD9D24CEDE3600D63221 /* NetworkConfig.swift */,
+				BD87FD9F24CEDFDC00D63221 /* JsonCode.swift */,
+				BD87FDA124CEE04000D63221 /* API.swift */,
+				BD87FDA324CEE0E500D63221 /* ResponseCode.swift */,
+				BD87FDD124CEF43800D63221 /* BaseTask.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -159,7 +196,7 @@
 				BD693EE3245845660093F643 /* MainStoryBoard.swift */,
 				BD693EE5245845840093F643 /* HomeStoryBoard.swift */,
 				BDC9078B244A0354008C041C /* Main.storyboard */,
-				BD90F9C2244C991C00FF366A /* Home.storyboard */,
+				BD87FDAE24CEE6C400D63221 /* Home.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -181,6 +218,29 @@
 				BD1AA63724A0CEC8005E8F89 /* Identifider.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		BD87FDB524CEE86F00D63221 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				BD87FDBC24CEE9E600D63221 /* Screen */,
+				BD87FDB624CEE89300D63221 /* UILocalizedLabel.swift */,
+				BD87FDBA24CEE97400D63221 /* UILocalizedButton.swift */,
+				BD87FDB824CEE8EB00D63221 /* String+Localized.swift */,
+				BD87FDC624CEECCE00D63221 /* LanguageManager.swift */,
+				BD87FDC824CEECF800D63221 /* LanguageItem.swift */,
+				BD87FDCE24CEF17600D63221 /* LocalizationMessage.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		BD87FDBC24CEE9E600D63221 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				BD87FDBD24CEE9F500D63221 /* PagingScreen.swift */,
+				BD87FDC324CEEA4F00D63221 /* LocalizationPagingScreen.strings */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		BD90F9C4244E049500FF366A /* Controller */ = {
@@ -250,6 +310,7 @@
 		BDC90784244A0353008C041C /* iChatter */ = {
 			isa = PBXGroup;
 			children = (
+				BD87FDB524CEE86F00D63221 /* Localization */,
 				BDADAC9924C1C856008D89E3 /* iChatterDebug.entitlements */,
 				BD1AA63924A0D2E3005E8F89 /* Extension */,
 				BD491FD7249CDAA4004E083E /* Network */,
@@ -274,6 +335,7 @@
 			children = (
 				BDEE72B324CAA99500362133 /* RootPagingViewController.swift */,
 				BDEE72B524CAADA500362133 /* PageViewController.swift */,
+				BD87FD9B24CED37000D63221 /* MyPagingViewController.swift */,
 			);
 			path = Paging;
 			sourceTree = "<group>";
@@ -332,6 +394,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
+				vi,
 			);
 			mainGroup = BDC90779244A0353008C041C;
 			productRefGroup = BDC90783244A0353008C041C /* Products */;
@@ -350,8 +414,10 @@
 			files = (
 				BDC90792244A035E008C041C /* LaunchScreen.storyboard in Resources */,
 				BDC9078F244A035E008C041C /* Assets.xcassets in Resources */,
+				BD87FDC124CEEA4F00D63221 /* LocalizationPagingScreen.strings in Resources */,
 				BDC9078D244A0354008C041C /* Main.storyboard in Resources */,
-				BD90F9C3244C991C00FF366A /* Home.storyboard in Resources */,
+				BD87FDAC24CEE6C400D63221 /* Home.storyboard in Resources */,
+				BD87FDCC24CEF17600D63221 /* LocalizationMessage.strings in Resources */,
 				BD17050124851CDE00FD84FE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,13 +490,20 @@
 			files = (
 				BD90F9D1244E069500FF366A /* MyImageMessageViewCell.swift in Sources */,
 				BD1AA63B24A0D2F1005E8F89 /* DateExtension.swift in Sources */,
+				BD87FD9C24CED37000D63221 /* MyPagingViewController.swift in Sources */,
 				BD73BA9A2493A78A001A62D6 /* Channel.swift in Sources */,
 				BDC9078A244A0354008C041C /* LoginViewController.swift in Sources */,
+				BD87FDA424CEE0E500D63221 /* ResponseCode.swift in Sources */,
 				BD693EDF245843810093F643 /* ChatViewController.swift in Sources */,
+				BD87FDBB24CEE97400D63221 /* UILocalizedButton.swift in Sources */,
 				BDC90786244A0354008C041C /* AppDelegate.swift in Sources */,
 				BD491FD2249CCE16004E083E /* ImageMessage.swift in Sources */,
+				BD87FDB724CEE89300D63221 /* UILocalizedLabel.swift in Sources */,
+				BD87FDA224CEE04000D63221 /* API.swift in Sources */,
+				BD87FDC924CEECF800D63221 /* LanguageItem.swift in Sources */,
 				BD693EE4245845660093F643 /* MainStoryBoard.swift in Sources */,
 				BD99260724979115007858B8 /* ChatPresenter.swift in Sources */,
+				BD87FDA024CEDFDC00D63221 /* JsonCode.swift in Sources */,
 				BD73BA9724939439001A62D6 /* RegisterSuccessController.swift in Sources */,
 				BD1AA63824A0CEC8005E8F89 /* Identifider.swift in Sources */,
 				BD90F9CF244E068500FF366A /* OutgoingTextMessageCell.swift in Sources */,
@@ -442,6 +515,7 @@
 				BD491FD6249CD574004E083E /* MessageType.swift in Sources */,
 				BDEE72B424CAA99500362133 /* RootPagingViewController.swift in Sources */,
 				BD491FD0249CCD84004E083E /* TextMessage.swift in Sources */,
+				BD87FD9E24CEDE3600D63221 /* NetworkConfig.swift in Sources */,
 				BD00771924812CD700171B2F /* LoginPresenter.swift in Sources */,
 				BD90F9CB244E052F00FF366A /* SenderMessageItem.swift in Sources */,
 				BD491FD9249CDAB4004E083E /* FirestoreHelper.swift in Sources */,
@@ -450,9 +524,13 @@
 				BD93EEE124A37ABE00DE7F1B /* ParseHelper.swift in Sources */,
 				BD491FCE249CCD1B004E083E /* BaseMessage.swift in Sources */,
 				BD99260B24979464007858B8 /* AuthCode.swift in Sources */,
+				BD87FDD224CEF43800D63221 /* BaseTask.swift in Sources */,
+				BD87FDC724CEECCE00D63221 /* LanguageManager.swift in Sources */,
+				BD87FDB924CEE8EB00D63221 /* String+Localized.swift in Sources */,
 				BD491FD4249CD1C0004E083E /* BaseMessageViewCell.swift in Sources */,
 				BD72D17A24516CFA00DC1B10 /* LocationsStorage.swift in Sources */,
 				BDEAD6EC248E531300740843 /* BaseViewController.swift in Sources */,
+				BD87FDBE24CEE9F500D63221 /* PagingScreen.swift in Sources */,
 				BD90F9C8244E04FC00FF366A /* IncommingTextMessageCell.swift in Sources */,
 				BD693EE6245845840093F643 /* HomeStoryBoard.swift in Sources */,
 			);
@@ -461,6 +539,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		BD87FDAE24CEE6C400D63221 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD87FDAD24CEE6C400D63221 /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		BD87FDC324CEEA4F00D63221 /* LocalizationPagingScreen.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD87FDC224CEEA4F00D63221 /* en */,
+				BD87FDC424CEEA5100D63221 /* ja */,
+				BD87FDC524CEEA5200D63221 /* vi */,
+			);
+			name = LocalizationPagingScreen.strings;
+			sourceTree = "<group>";
+		};
+		BD87FDCE24CEF17600D63221 /* LocalizationMessage.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD87FDCD24CEF17600D63221 /* en */,
+				BD87FDCF24CEF17900D63221 /* ja */,
+				BD87FDD024CEF17A00D63221 /* vi */,
+			);
+			name = LocalizationMessage.strings;
+			sourceTree = "<group>";
+		};
 		BDC9078B244A0354008C041C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -484,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -544,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6MI-ar-N7s"; */
+"6MI-ar-N7s.text" = "Label";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit amet"; ObjectID = "7Mx-xW-MoZ"; */
+"7Mx-xW-MoZ.text" = "Lorem ipsum dolor sit amet";
+
+/* Class = "UILabel"; text = "Nickname"; ObjectID = "D1p-u9-Wtg"; */
+"D1p-u9-Wtg.text" = "Nickname";
+
+/* Class = "UIButton"; normalTitle = "Forward"; ObjectID = "MMA-JE-3MT"; */
+"MMA-JE-3MT.normalTitle" = "Forward";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "Pys-T4-Dde"; */
+"Pys-T4-Dde.normalTitle" = "Logout";
+
+/* Class = "UILabel"; text = "@Username"; ObjectID = "aLf-2E-seK"; */
+"aLf-2E-seK.text" = "@Username";
+
+/* Class = "UILabel"; text = "10:00"; ObjectID = "e2I-nz-dXD"; */
+"e2I-nz-dXD.text" = "10:00";
+
+/* Class = "UIButton"; normalTitle = "Previous"; ObjectID = "md5-YJ-6IH"; */
+"md5-YJ-6IH.normalTitle" = "Previous";
+
+/* Class = "UILabel"; text = "ABCDEFGAHABCD"; ObjectID = "rJt-n7-bej"; */
+"rJt-n7-bej.text" = "ABCDEFGAHABCD";
+
+/* Class = "UILabel"; text = "Nickname"; ObjectID = "wQa-XL-UcT"; */
+"wQa-XL-UcT.text" = "Nickname";

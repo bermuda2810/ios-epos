@@ -1,0 +1,10 @@
+/* 
+  LocalizationPagingScreen.strings
+  iChatter
+
+  Created by Bui Quoc Viet on 7/27/20.
+  Copyright © 2020 NAL Viet Nam. All rights reserved.
+*/
+"Hello" = "Hello";
+"Previous" = "Previous";
+"Forward" = "Forward";
