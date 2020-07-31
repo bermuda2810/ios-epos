@@ -33,6 +33,12 @@ class BaseViewController: UIViewController {
         hud!.show(in: self.view)
     }
     
+    func showDialogWithMessage(_ message : String) {
+        hud = JGProgressHUD(style: .dark)
+        hud!.textLabel.text = message
+        hud!.show(in: self.view)
+    }
+    
     func hideWaitingDialog() {
         hud?.dismiss()
     }

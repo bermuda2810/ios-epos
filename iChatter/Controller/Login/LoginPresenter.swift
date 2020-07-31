@@ -20,7 +20,7 @@ protocol LoginView {
     func onStartLogin()
 }
 
-class LoginPresenter : NSObject {
+class LoginPresenter : BasePresenter {
     
     private weak var window : UIWindow!
     private var loginView : LoginView!
@@ -34,6 +34,12 @@ class LoginPresenter : NSObject {
     }
     
     //MARK: - Request Login
+    
+    func requestLoginByAccount(username : String, password : String) {
+        let request = LoginTask(username: username, password: password)
+        super.requestApi(request, blockSucess, blockFail)
+    }
+    
     func requestLoginFacebook() {
         let loginManager = LoginManager()
         let vc = loginView as? UIViewController

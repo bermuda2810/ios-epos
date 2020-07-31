@@ -42,6 +42,7 @@
 		BD87FDC924CEECF800D63221 /* LanguageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDC824CEECF800D63221 /* LanguageItem.swift */; };
 		BD87FDCC24CEF17600D63221 /* LocalizationMessage.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD87FDCE24CEF17600D63221 /* LocalizationMessage.strings */; };
 		BD87FDD224CEF43800D63221 /* BaseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDD124CEF43800D63221 /* BaseTask.swift */; };
+		BD87FDD424D1907C00D63221 /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87FDD324D1907C00D63221 /* LoginTask.swift */; };
 		BD90F9C8244E04FC00FF366A /* IncommingTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9C7244E04FC00FF366A /* IncommingTextMessageCell.swift */; };
 		BD90F9CB244E052F00FF366A /* SenderMessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */; };
 		BD90F9CD244E066600FF366A /* SenderImageMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90F9CC244E066600FF366A /* SenderImageMessageViewCell.swift */; };
@@ -56,6 +57,8 @@
 		BDC9078D244A0354008C041C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC9078B244A0354008C041C /* Main.storyboard */; };
 		BDC9078F244A035E008C041C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC9078E244A035E008C041C /* Assets.xcassets */; };
 		BDC90792244A035E008C041C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC90790244A035E008C041C /* LaunchScreen.storyboard */; };
+		BDE9260824D437FE005E7A7B /* TokenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9260724D437FE005E7A7B /* TokenItem.swift */; };
+		BDE9260A24D43BA1005E7A7B /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9260924D43BA1005E7A7B /* BasePresenter.swift */; };
 		BDEAD6EC248E531300740843 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEAD6EB248E531300740843 /* BaseViewController.swift */; };
 		BDEE72B424CAA99500362133 /* RootPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE72B324CAA99500362133 /* RootPagingViewController.swift */; };
 		BDEE72B624CAADA500362133 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE72B524CAADA500362133 /* PageViewController.swift */; };
@@ -106,6 +109,7 @@
 		BD87FDCF24CEF17900D63221 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LocalizationMessage.strings; sourceTree = "<group>"; };
 		BD87FDD024CEF17A00D63221 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LocalizationMessage.strings; sourceTree = "<group>"; };
 		BD87FDD124CEF43800D63221 /* BaseTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTask.swift; sourceTree = "<group>"; };
+		BD87FDD324D1907C00D63221 /* LoginTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTask.swift; sourceTree = "<group>"; };
 		BD90F9C7244E04FC00FF366A /* IncommingTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncommingTextMessageCell.swift; sourceTree = "<group>"; };
 		BD90F9CA244E052F00FF366A /* SenderMessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderMessageItem.swift; sourceTree = "<group>"; };
 		BD90F9CC244E066600FF366A /* SenderImageMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderImageMessageViewCell.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		BDC9078E244A035E008C041C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDC90791244A035E008C041C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDC90793244A035E008C041C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE9260724D437FE005E7A7B /* TokenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenItem.swift; sourceTree = "<group>"; };
+		BDE9260924D43BA1005E7A7B /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		BDEAD6EB248E531300740843 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BDEE72B324CAA99500362133 /* RootPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPagingViewController.swift; sourceTree = "<group>"; };
 		BDEE72B524CAADA500362133 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +191,7 @@
 				BD87FDA124CEE04000D63221 /* API.swift */,
 				BD87FDA324CEE0E500D63221 /* ResponseCode.swift */,
 				BD87FDD124CEF43800D63221 /* BaseTask.swift */,
+				BD87FDD324D1907C00D63221 /* LoginTask.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -251,6 +258,7 @@
 				BD00771524812BAC00171B2F /* Login */,
 				BD90F9C5244E049B00FF366A /* Chat */,
 				BDEAD6EB248E531300740843 /* BaseViewController.swift */,
+				BDE9260924D43BA1005E7A7B /* BasePresenter.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 				BD491FCD249CCD1B004E083E /* BaseMessage.swift */,
 				BD491FCF249CCD84004E083E /* TextMessage.swift */,
 				BD491FD1249CCE16004E083E /* ImageMessage.swift */,
+				BDE9260724D437FE005E7A7B /* TokenItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -489,10 +498,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD90F9D1244E069500FF366A /* MyImageMessageViewCell.swift in Sources */,
+				BDE9260A24D43BA1005E7A7B /* BasePresenter.swift in Sources */,
 				BD1AA63B24A0D2F1005E8F89 /* DateExtension.swift in Sources */,
 				BD87FD9C24CED37000D63221 /* MyPagingViewController.swift in Sources */,
 				BD73BA9A2493A78A001A62D6 /* Channel.swift in Sources */,
 				BDC9078A244A0354008C041C /* LoginViewController.swift in Sources */,
+				BDE9260824D437FE005E7A7B /* TokenItem.swift in Sources */,
 				BD87FDA424CEE0E500D63221 /* ResponseCode.swift in Sources */,
 				BD693EDF245843810093F643 /* ChatViewController.swift in Sources */,
 				BD87FDBB24CEE97400D63221 /* UILocalizedButton.swift in Sources */,
@@ -500,6 +511,7 @@
 				BD491FD2249CCE16004E083E /* ImageMessage.swift in Sources */,
 				BD87FDB724CEE89300D63221 /* UILocalizedLabel.swift in Sources */,
 				BD87FDA224CEE04000D63221 /* API.swift in Sources */,
+				BD87FDD424D1907C00D63221 /* LoginTask.swift in Sources */,
 				BD87FDC924CEECF800D63221 /* LanguageItem.swift in Sources */,
 				BD693EE4245845660093F643 /* MainStoryBoard.swift in Sources */,
 				BD99260724979115007858B8 /* ChatPresenter.swift in Sources */,

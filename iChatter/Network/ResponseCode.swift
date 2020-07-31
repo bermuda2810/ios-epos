@@ -20,7 +20,7 @@ class ResponseCode {
     static let invalidEmail : Int = 2001
     static let invalidPassword : Int = 2002
     
-    static func getMessageByCode(code : Int) -> String {
+    static func getMessageByCode(_ code : Int) -> String {
         return NSLocalizedString("\(code)", tableName: "LocalizationMessage", comment: "")
     }
 }

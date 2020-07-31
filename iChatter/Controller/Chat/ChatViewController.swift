@@ -57,7 +57,6 @@ class ChatViewController: BaseViewController {
         unregisterKeyboardView()
     }
     
-    
     override func onKeyboardViewChanged(_ show : Bool,
                          _ heightTabbar : Float,
                          _  heightKeyboard : Float,
