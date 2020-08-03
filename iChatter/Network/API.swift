@@ -9,6 +9,6 @@
 import UIKit
 
 class Api {
-    static let login = "login"
+    static let login = "api/v1/login"
     static let loginSocial = "social"
 }

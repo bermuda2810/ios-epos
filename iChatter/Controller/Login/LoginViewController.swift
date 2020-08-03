@@ -49,11 +49,11 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func onApplePressed(_ sender: Any) {
-        presenter.requestLoginApple()
+//        presenter.requestLoginApple()
+        presenter.requestLoginByAccount(username: "system@schoolbus.vn", password: "123456789")
     }
 
     @IBAction func onRegisterPressed(_ sender: Any) {
-//        performSegue(withIdentifier: "segueShowRegisterScreen", sender: nil)
         let registerVC = MainStoryBoard.init().getControllerByStoryboardID(identifier: "RegisterViewController")
         self.navigationController?.pushViewController(registerVC, animated: true)
     }
@@ -62,7 +62,6 @@ class LoginViewController: BaseViewController {
     private func showErrorDialog(message : String) {
         print(message)
     }
-    
 }
 
 extension LoginViewController : LoginView {

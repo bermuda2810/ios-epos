@@ -74,22 +74,6 @@ class BaseTask<T> {
         }
     }
     
-//    public func requestUploadFile(fileURL : URL, blockSuccess :@escaping (_ result :T) -> Void ,
-//                                  blockFailure : @escaping (_ errorCode :Int?,_ errorMessage :String?) -> Void, name : String) -> Void {
-//
-//        self.blockSuccess = blockSuccess
-//        self.blockFailure = blockFailure
-//
-//        let headers: HTTPHeaders = self.getDefaultHeaders()
-//        let method: HTTPMethod = dataSource.method()
-//        let url:URLConvertible = self.genURL()
-//
-//        let request = AF.upload(fileURL, to: url, method: method, headers: headers)
-//        request.responseJSON { response in
-//
-//        }
-//    }
-    
     private func handleSuccessHTTPRequest(_ response :DataResponse<Any, AFError>) {
         guard let json = try? JSON(data: response.data!) else {
                 self.blockFailure!(9999,"Parse Failed")
@@ -139,8 +123,7 @@ class BaseTask<T> {
     func getDefaultHeaders() -> HTTPHeaders {
         return [
             "Content-Type": "application/json",
-            "Accept" : "application/json",
-            "Content-Type": "application/x-www-form-urlencoded"
+            "Accept" : "application/json"
         ]
     }
 }

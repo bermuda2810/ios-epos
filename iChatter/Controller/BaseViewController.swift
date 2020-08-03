@@ -9,7 +9,7 @@
 import UIKit
 import JGProgressHUD
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, CommonView {
     
     private var hud : JGProgressHUD?
     var titleNavigation : String? { return nil }
@@ -24,7 +24,6 @@ class BaseViewController: UIViewController {
             NSAttributedString.Key.foregroundColor : UIColor.black // Only for title
         ]
     }
-    
     
     //MARK: - Dialog Waiting
     func showWaitingDialog() {
@@ -106,5 +105,14 @@ class BaseViewController: UIViewController {
     
     func onKeyboardDidShow() {
         
+    }
+    
+    func onConnectionTimeout() {
+        self.hideWaitingDialog()
+    }
+    
+    func onWrongResponseFormat() {
+        self.hideWaitingDialog()
+        self.showDialogWithMessage("Code :9999 - Wrong response format")
     }
 }

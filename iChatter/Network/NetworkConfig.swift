@@ -16,7 +16,7 @@ class NetworkConfig {
     
     static let ENV : String = DEVELOPMENT
     
-    static var API_URL : String = "https://api-test-branch.schoolbus.cf/api/"
+    static var API_URL : String = "https://api-test-branch.schoolbus.cf"
     
     static var API_VERSION = "v1"
 //    static var DOMAIN : String = ""

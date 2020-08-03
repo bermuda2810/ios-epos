@@ -14,7 +14,7 @@ import Firebase
 import CryptoKit
 
 
-protocol LoginView {
+protocol LoginView : BaseView {
     func onLoginSuccess()
     func onLoginFail(message : String)
     func onStartLogin()
@@ -28,8 +28,8 @@ class LoginPresenter : BasePresenter {
     
     var name : String!
     
-    
     init(view : LoginView) {
+        super.init(view)
         self.loginView = view
     }
     
@@ -37,7 +37,11 @@ class LoginPresenter : BasePresenter {
     
     func requestLoginByAccount(username : String, password : String) {
         let request = LoginTask(username: username, password: password)
-        super.requestApi(request, blockSucess, blockFail)
+        super.requestApi(api: request, completion: { (result) in
+            print("Login success!!!")
+        }) { (code, message) in
+            print(message)
+        }
     }
     
     func requestLoginFacebook() {

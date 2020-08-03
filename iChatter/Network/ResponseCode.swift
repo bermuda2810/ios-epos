@@ -12,6 +12,7 @@ import UIKit
 class ResponseCode {
     static let success : Int = 200
     static let timeout : Int = -1001
+    static let wrongResponseFormat : Int = 9999
     static let urlNotSupport : Int = -1002
     static let noConnection : Int = -1009
     static let errorAuth : Int = 401
