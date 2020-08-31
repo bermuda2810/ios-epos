@@ -14,7 +14,7 @@ protocol TaskDatasource {
     func method() -> HTTPMethod
     func api() -> String
     func parameters() -> Parameters?
-    func onParseDataByResponse(_ response :JSON) throws -> Any
+    func onParseDataByResponse(_ response : JSON) throws -> Any
     func paramEncoding() -> ParameterEncoding
 }
 
@@ -36,7 +36,7 @@ class BaseTask<T> {
         let headers: HTTPHeaders = self.getDefaultHeaders()
         let method: HTTPMethod = dataSource.method()
         let url:URLConvertible = self.genURL()
-        let params: Dictionary = dataSource.parameters()!
+        let params: Dictionary = self.getDefaultParams()
         let encoding : ParameterEncoding = dataSource.paramEncoding()
         
         AF.request(url,
@@ -76,11 +76,21 @@ class BaseTask<T> {
     
     private func handleSuccessHTTPRequest(_ response :DataResponse<Any, AFError>) {
         guard let json = try? JSON(data: response.data!) else {
-                self.blockFailure!(9999,"Parse Failed")
-                return
-            }
+            self.blockFailure!(ResponseCode.wrongResponseFormat,"Reponse invalid JSON")
+            return
+        }
         print("Data rereived: ", json)
-        self.handleResponseApi(json: json)
+        if let errorMessage: String = json["Error Message"].string {
+            self.blockFailure!(ResponseCode.somethingWentWrong, errorMessage)
+        }else {
+            do {
+                let result = try dataSource.onParseDataByResponse(json)
+                print("Go to success block")
+                self.blockSuccess!(result as! T)
+            } catch {
+                self.blockFailure!(ResponseCode.parseJSONError, "Parse JSON Failed")
+            }
+        }
     }
     
     private func handleErrorHttpRequest(error : Error) {
@@ -96,26 +106,26 @@ class BaseTask<T> {
         }
     }
     
-    private func handleResponseApi(json : JSON) {
-        let code :Int! = json[JsonCode.statusCode].intValue
-        if (code == ResponseCode.success) {
-            do {
-                let result = try dataSource.onParseDataByResponse(json)
-                print("Go to success block")
-                self.blockSuccess!(result as! T)
-            } catch {
-                self.blockFailure!(ResponseCode.parseJSONError, "Parse JSON Failed")
-            }
-        }else {
-            print("Go to error block")
-            let status = json[JsonCode.statusCode].int != nil ? json[JsonCode.statusCode].int! : ResponseCode.serverError
-            self.blockFailure!(status, "Something went wrong")
-        }
-    }
-        
+    //    private func handleResponseApi(json : JSON) {
+    //        let code :Int! = json[JsonCode.statusCode].intValue
+    //        if (code == ResponseCode.success) {
+    //            do {
+    //                let result = try dataSource.onParseDataByResponse(json)
+    //                print("Go to success block")
+    //                self.blockSuccess!(result as! T)
+    //            } catch {
+    //                self.blockFailure!(ResponseCode.parseJSONError, "Parse JSON Failed")
+    //            }
+    //        }else {
+    //            print("Go to error block")
+    //            let status = json[JsonCode.statusCode].int != nil ? json[JsonCode.statusCode].int! : ResponseCode.serverError
+    //            self.blockFailure!(status, "Something went wrong")
+    //        }
+    //    }
+    
     func genURL() -> String {
         let api :String = dataSource.api()
-        let url :String = String.init(format: "%@/%@", NetworkConfig.API_URL, api)
+        let url :String = String.init(format: "%@/%@/%@", NetworkConfig.API_URL, NetworkConfig.API_VERSION, api)
         print("API requesting ", url)
         return url
     }
@@ -125,5 +135,9 @@ class BaseTask<T> {
             "Content-Type": "application/json",
             "Accept" : "application/json"
         ]
+    }
+    
+    private func getDefaultParams() -> Parameters {
+        return ["apikey" : NetworkConfig.API_KEY]
     }
 }

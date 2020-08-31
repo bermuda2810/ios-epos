@@ -18,5 +18,7 @@ pod 'SnapKit', '~> 5.0.0'
 pod 'FBSDKLoginKit'
 pod 'SQLite.swift', '~> 0.12.2'
 pod 'GoogleSignIn'
-pod 'SideMenu', '~> 6.0'	
+pod 'SideMenu', '~> 6.0'
+pod 'MultiSelectSegmentedControl'
+pod 'Charts'	
 end

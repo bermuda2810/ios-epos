@@ -20,6 +20,7 @@ class ResponseCode {
     static let parseJSONError : Int = 2000
     static let invalidEmail : Int = 2001
     static let invalidPassword : Int = 2002
+    static let somethingWentWrong : Int = 2003
     
     static func getMessageByCode(_ code : Int) -> String {
         return NSLocalizedString("\(code)", tableName: "LocalizationMessage", comment: "")

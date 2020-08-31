@@ -19,15 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func setupRootViewController() {
-        let login = UserDefaults.standard.bool(forKey: AuthCode.LOGIN)
-        var rootViewController : UIViewController
-        if login {
-            let homeStoryboard = HomeStoryBoard()
-            rootViewController = homeStoryboard.getInitialViewController()
-        }else {
-            let mainStoryboard = MainStoryBoard()
-            rootViewController = mainStoryboard.getInitialViewController()
-        }
+        let rootViewController : UIViewController = StockStoryBoard().getInitialViewController()
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
     }
@@ -54,14 +46,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
         print("sceneWillEnterForeground")
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.changeLocationToForeground()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
         print("sceneDidEnterBackground")
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.changeLocationToBackground()
     }
 
 }
