@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-protocol BaseView {
+protocol BaseView: class {
 }
 
 @objc protocol CommonView: class {
@@ -21,7 +21,7 @@ protocol BaseView {
 
 class BasePresenter : NSObject {
     
-    private var view : CommonView!
+    private weak var view : CommonView!
     
     init(_ view : BaseView) {
         self.view = view as? CommonView

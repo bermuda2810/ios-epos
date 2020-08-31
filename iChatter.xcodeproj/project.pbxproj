@@ -55,6 +55,8 @@
 		BDEE41BA24FD445000962847 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDEE41B824FD445000962847 /* Home.storyboard */; };
 		BDEE41BB24FD445000962847 /* HomeStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41B924FD445000962847 /* HomeStoryBoard.swift */; };
 		BDEE41BD24FD506100962847 /* GetRealTimePriceTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41BC24FD506100962847 /* GetRealTimePriceTask.swift */; };
+		BDEE41C024FD5FE400962847 /* DetailStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41BF24FD5FE400962847 /* DetailStockViewController.swift */; };
+		BDEE41C224FD63D500962847 /* DetailStockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41C124FD63D500962847 /* DetailStockPresenter.swift */; };
 		FA284CB6BE92441EDA4F72EC /* Pods_iChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93800A00F2ECF7C2047AFEB /* Pods_iChatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +120,8 @@
 		BDEE41B824FD445000962847 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BDEE41B924FD445000962847 /* HomeStoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeStoryBoard.swift; sourceTree = "<group>"; };
 		BDEE41BC24FD506100962847 /* GetRealTimePriceTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimePriceTask.swift; sourceTree = "<group>"; };
+		BDEE41BF24FD5FE400962847 /* DetailStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStockViewController.swift; sourceTree = "<group>"; };
+		BDEE41C124FD63D500962847 /* DetailStockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStockPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,7 @@
 		BD90F9C4244E049500FF366A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BDEE41BE24FD5FC400962847 /* Detail Stock */,
 				BDEE419024FCBAC600962847 /* Stock */,
 				BDEAD6EB248E531300740843 /* BaseViewController.swift */,
 				BDE9260924D43BA1005E7A7B /* BasePresenter.swift */,
@@ -294,6 +299,15 @@
 				BDEE41B224FCF36600962847 /* ProfileDB.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		BDEE41BE24FD5FC400962847 /* Detail Stock */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE41BF24FD5FE400962847 /* DetailStockViewController.swift */,
+				BDEE41C124FD63D500962847 /* DetailStockPresenter.swift */,
+			);
+			path = "Detail Stock";
 			sourceTree = "<group>";
 		};
 		F9D7F2464F3F180CE1B66578 /* Pods */ = {
@@ -467,6 +481,7 @@
 				BDEE41AB24FCD91F00962847 /* StockDB.swift in Sources */,
 				BD491FD6249CD574004E083E /* MessageType.swift in Sources */,
 				BDEE419824FCBBD100962847 /* Profile.swift in Sources */,
+				BDEE41C024FD5FE400962847 /* DetailStockViewController.swift in Sources */,
 				BD87FD9E24CEDE3600D63221 /* NetworkConfig.swift in Sources */,
 				BDEE419C24FCBF6000962847 /* Stock.swift in Sources */,
 				BDC90788244A0354008C041C /* SceneDelegate.swift in Sources */,
@@ -474,6 +489,7 @@
 				BDEE41BD24FD506100962847 /* GetRealTimePriceTask.swift in Sources */,
 				BD99260B24979464007858B8 /* AuthCode.swift in Sources */,
 				BDEE419E24FCC36600962847 /* StockViewCell.swift in Sources */,
+				BDEE41C224FD63D500962847 /* DetailStockPresenter.swift in Sources */,
 				BDEE41B724FD43E000962847 /* MainStoryBoard.swift in Sources */,
 				BD87FDD224CEF43800D63221 /* BaseTask.swift in Sources */,
 				BDEE41A824FCD84700962847 /* BaseRequestDB.swift in Sources */,

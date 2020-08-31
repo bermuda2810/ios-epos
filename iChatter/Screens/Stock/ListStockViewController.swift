@@ -9,6 +9,10 @@
 import UIKit
 import ESPullToRefresh
 
+protocol ListStockDelegate : class {
+    func onMoveOnStockDetail(_ stock : Stock)
+}
+
 class ListStockViewController: BaseViewController {
 
     @IBOutlet weak var tblStock: UITableView!
@@ -17,6 +21,7 @@ class ListStockViewController: BaseViewController {
     private var noMoreData : Bool = false
     private var isLoadingMore : Bool = false
     private var filterFavourite : Int = 0
+    public var delegate : ListStockDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,5 +149,10 @@ extension ListStockViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.01
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let stock = stocks[indexPath.row]
+        self.delegate?.onMoveOnStockDetail(stock)
     }
 }

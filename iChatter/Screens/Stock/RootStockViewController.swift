@@ -32,6 +32,7 @@ class RootStockViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueListStockViewController" {
             self.listStockVC = segue.destination as? ListStockViewController
+            self.listStockVC?.delegate = self
         }
     }
 }
@@ -51,5 +52,12 @@ extension RootStockViewController : RootStockView {
     
     func onStartLoadStock() {
         super.showWaitingDialog()
+    }
+}
+
+extension RootStockViewController : ListStockDelegate {
+    
+    func onMoveOnStockDetail(_ stock: Stock) {
+        performSegue(withIdentifier: "segueStockDetailViewController", sender: nil)
     }
 }

@@ -14,6 +14,7 @@ class GetStockProfile: BaseTask<Stock>, TaskDatasource {
     
     private var stock : Stock!
     private var stockId : Int!
+    
     init(stock : Stock) {
         self.stock = stock
         self.stockId = stock.id
@@ -39,6 +40,10 @@ class GetStockProfile: BaseTask<Stock>, TaskDatasource {
         profile.companyName = response[0]["companyName"].stringValue
         profile.price = response[0]["price"].doubleValue
         profile.stockId = self.stockId
+        profile.changes = response[0]["changes"].doubleValue
+        profile.lastDiv = response[0]["lastDiv"].intValue
+        profile.industry = response[0]["industry"].stringValue
+        profile.sector = response[0]["sector"].stringValue
         stock.profile = profile
         return stock as Any
     }

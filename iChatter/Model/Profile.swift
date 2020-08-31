@@ -15,4 +15,8 @@ class Profile {
     var changesPercentage : String? = ""
     var companyName : String? = ""
     var image : String? = ""
+    var changes : Double = 0.0
+    var lastDiv : Int = 0
+    var sector : String = ""
+    var industry : String = ""
 }
