@@ -56,20 +56,41 @@ class ListStockViewController: BaseViewController {
 
 extension ListStockViewController : StockViewCellDelegate {
     
+    func onNeedUpdateStockPrice(_ stock: Stock) {
+        presenter.requestPriceStock(stock)
+    }
+    
     func onNeedLoadProfileAtIndexPath(_ indexPath : IndexPath, _ stock : Stock) {
         stock.indexPath = indexPath
         presenter.requestProfile(stock: stock)
     }
     
-    func onChangedFavouriteAtIndexPath(_ indexPath: IndexPath, _ stock: Stock) {
+    func onChangedFavourite(_ cell : UITableViewCell, _ stock : Stock) {
         presenter.requestUpdateStock(stock: stock)
-        self.stocks.remove(at: indexPath.row)
-        tblStock.deleteRows(at: [indexPath], with: .fade)
+        let indexPath = tblStock.indexPath(for: cell)
+        var index = 0
+        for i in (0...stocks.count) {
+            if stocks[i].id == stock.id {
+                index = i
+                break
+            }
+        }
+        stocks.remove(at: index)
+        if let indexPath = indexPath {
+            tblStock.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 }
 
 
 extension ListStockViewController : ListStockView {
+    
+    func onStockPriceUpdated(_ stock: Stock) {
+        var notification = Notification(name: Notification.Name.init("Stock-Price-\(stock.id)"))
+        notification.object = stock
+        NotificationCenter.default.post(notification)
+    }
+    
     
     func onNewStocks(stocks: Array<Stock>) {
         tblStock?.es.stopPullToRefresh()
@@ -98,12 +119,9 @@ extension ListStockViewController : ListStockView {
                 break
             }
         }
-        
-        if let cell = tblStock.cellForRow(at: newStock.indexPath!) {
-            if ( (cell as! StockViewCell).stock.id == newStock.id) {
-                tblStock.reloadRows(at: [newStock.indexPath!], with: .automatic)
-            }
-        }
+        var notification = Notification(name: Notification.Name.init("Stock-Profile-\(newStock.id)"))
+        notification.object = newStock
+        NotificationCenter.default.post(notification)
     }
     
     

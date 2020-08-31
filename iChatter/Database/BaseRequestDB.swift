@@ -31,6 +31,7 @@ class BaseRequestDB {
     }
 
     private func closeDatabase() {
+        print("Close to Database")
         self.database = nil
     }
 }

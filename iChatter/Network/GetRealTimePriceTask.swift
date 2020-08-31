@@ -1,5 +1,5 @@
 //
-//  GetStockProfile.swift
+//  GetRealTimePriceTask.swift
 //  iChatter
 //
 //  Created by Bui Quoc Viet on 8/31/20.
@@ -10,13 +10,12 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class GetStockProfile: BaseTask<Stock>, TaskDatasource {
+class GetRealTimePriceTask: BaseTask<Stock>, TaskDatasource {
     
     private var stock : Stock!
-    private var stockId : Int!
+    
     init(stock : Stock) {
         self.stock = stock
-        self.stockId = stock.id
     }
     
     func method() -> HTTPMethod {
@@ -24,7 +23,7 @@ class GetStockProfile: BaseTask<Stock>, TaskDatasource {
     }
     
     func api() -> String {
-        let api = String.init(format: "%@/%@", Api.profile, self.stock.symbol)
+        let api = String.init(format: "%@/%@", Api.realTimePrice, self.stock.symbol)
         return api
     }
     
@@ -33,13 +32,7 @@ class GetStockProfile: BaseTask<Stock>, TaskDatasource {
     }
     
     func onParseDataByResponse(_ response: JSON) throws -> Any {
-        let profile = Profile()
-        profile.changesPercentage = response[0]["changesPercentage"].stringValue
-        profile.image = response[0]["image"].stringValue
-        profile.companyName = response[0]["companyName"].stringValue
-        profile.price = response[0]["price"].doubleValue
-        profile.stockId = self.stockId
-        stock.profile = profile
+        stock.price = response[0]["price"].doubleValue
         return stock as Any
     }
     

@@ -99,13 +99,13 @@
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5P-D4-vHf">
-                                                            <rect key="frame" x="100" y="45.5" width="28" height="30"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5P-D4-vHf" userLabel="Lbl Price">
+                                                            <rect key="frame" x="100" y="45" width="25" height="26.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                             <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="L4O-PK-Umk">
+                                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="L4O-PK-Umk">
                                                             <rect key="frame" x="345" y="10" width="34" height="34"/>
                                                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <gestureRecognizers/>
@@ -140,7 +140,7 @@
                                                         <constraint firstItem="okc-tk-mN8" firstAttribute="top" secondItem="MoJ-xh-YPs" secondAttribute="top" id="WK3-tL-gEd"/>
                                                         <constraint firstAttribute="bottom" secondItem="44e-Ek-lre" secondAttribute="bottom" constant="10" id="a6R-tX-BiC"/>
                                                         <constraint firstAttribute="trailing" secondItem="L4O-PK-Umk" secondAttribute="trailing" constant="15" id="hF2-Lg-l1L"/>
-                                                        <constraint firstItem="z5P-D4-vHf" firstAttribute="top" secondItem="okc-tk-mN8" secondAttribute="bottom" constant="5.5" id="hLY-Xk-ajS"/>
+                                                        <constraint firstItem="z5P-D4-vHf" firstAttribute="top" secondItem="okc-tk-mN8" secondAttribute="bottom" constant="5" id="hLY-Xk-ajS"/>
                                                         <constraint firstItem="44e-Ek-lre" firstAttribute="trailing" secondItem="L4O-PK-Umk" secondAttribute="trailing" id="jbu-kw-qG8"/>
                                                         <constraint firstItem="z5P-D4-vHf" firstAttribute="leading" secondItem="okc-tk-mN8" secondAttribute="leading" id="pgv-60-OgW"/>
                                                         <constraint firstItem="44e-Ek-lre" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MoJ-xh-YPs" secondAttribute="trailing" constant="15" id="zgF-bH-V5j"/>
@@ -158,8 +158,8 @@
                                         <connections>
                                             <outlet property="imgFavourite" destination="L4O-PK-Umk" id="ik5-PF-8Ms"/>
                                             <outlet property="imgStock" destination="MoJ-xh-YPs" id="tJj-f2-BSp"/>
-                                            <outlet property="lblChangesPercentage" destination="z5P-D4-vHf" id="Tbw-af-uGf"/>
                                             <outlet property="lblCompany" destination="44e-Ek-lre" id="QfT-AL-tjx"/>
+                                            <outlet property="lblPrice" destination="z5P-D4-vHf" id="iCr-PO-Uef"/>
                                             <outlet property="lblSymbol" destination="okc-tk-mN8" id="km4-cJ-nA7"/>
                                         </connections>
                                     </tableViewCell>
@@ -261,7 +261,7 @@
     </scenes>
     <resources>
         <image name="default_stock" width="170" height="170"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="Background Cell">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -9,6 +9,7 @@
 import UIKit
 
 protocol ListStockView: BaseView {
+    func onStockPriceUpdated(_ stock : Stock)
     func onStockUpdated(_ stock : Stock)
     func onNewStocks(stocks : Array<Stock>)
     func onLoadMoreStocks(stocks : Array<Stock>)
@@ -27,6 +28,15 @@ class ListStockPresenter: BasePresenter {
         self.view = view
         self.offset = 0
         self.limit = 50
+    }
+    
+    func requestPriceStock(_ stock : Stock) {
+        let task = GetRealTimePriceTask(stock: stock)
+        super.requestApi(api: task, completion: { [unowned self] (stock) in
+            self.view.onStockPriceUpdated(stock)
+        }) { [unowned self] (errorCode, errorMessage) in
+            //            self.view.onLoadFail(errorCode, errorMessage)
+        }
     }
     
     func requestListStock(_ favourite : Int) {
@@ -48,13 +58,14 @@ class ListStockPresenter: BasePresenter {
         return stocks
     }
     
+    
     func requestProfile(stock : Stock) {
         let task = GetStockProfile(stock: stock)
         super.requestApi(api: task, completion: { [unowned self] (stock) in
             self.saveProfileToDatabase(stock)
             self.view.onStockUpdated(stock)
-        }) { [unowned self] (errorCode, errorMessage) in
-//            self.view.onLoadFail(errorCode, errorMessage)
+        }) { (errorCode, errorMessage) in
+            // self.view.onLoadFail(errorCode, errorMessage)
         }
     }
     

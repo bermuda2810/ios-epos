@@ -9,8 +9,7 @@
 import UIKit
 
 class Api {
-    static let login = "api/v1/login"
-    static let loginSocial = "social"
     static let listStock = "stock/list"
     static let profile = "profile"
+    static let realTimePrice = "quote-short"
 }

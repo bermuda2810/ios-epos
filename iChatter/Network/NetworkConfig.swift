@@ -20,7 +20,7 @@ class NetworkConfig {
 
     static var API_VERSION = "v3"
     
-    static var API_KEY : String = "35ba68c33ab38e7ac8ca4e8e1889ac59"
+    static var API_KEY : String = "52029eddbea200d5b0e45b05dc3b615e"
     
     
 }
