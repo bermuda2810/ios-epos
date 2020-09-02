@@ -85,26 +85,24 @@ class DetailStockViewController: BaseViewController {
     }
     
     func updateChart(){
-        var lineChartEntry  = [ChartDataEntry]() //this is the Array that will eventually be displayed on the graph.
-        
-        //here is the for loop
+        var lineChartEntry  = [ChartDataEntry]()
+
         for i in 0..<sessions.count {
-            let value = ChartDataEntry(x: Double(i), y: sessions[i].open) // here we set the X and Y status in a data chart entry
-            lineChartEntry.append(value) // here we add it to the data set
+            let value = ChartDataEntry(x: Double(i), y: sessions[i].open)
+            lineChartEntry.append(value)
         }
 
-        let line1 = LineChartDataSet(entries: lineChartEntry, label: "") //Here we convert lineChartEntry to a LineChartDataSet
-        line1.colors = [NSUIColor.blue] //Sets the colour to blue
-        line1.circleHoleRadius = 0.0
-        line1.circleRadius = 0.0
-        line1.drawValuesEnabled = false
+        let line = LineChartDataSet(entries: lineChartEntry, label: "")
+        line.colors = [NSUIColor.blue] //Sets the colour to blue
+        line.circleHoleRadius = 0.0
+        line.circleRadius = 0.0
+        line.drawValuesEnabled = false
         
-        let data = LineChartData() //This is the object that will be added to the chart
-        data.addDataSet(line1) //Adds the line to the dataSet
+        let data = LineChartData()
+        data.addDataSet(line)
         
-
-        chartView.data = data //finally - it adds the chart data to the chart and causes an update
-        chartView.chartDescription?.text = "Stock Line chart" // Here we set the description for the graph
+        chartView.data = data
+        chartView.chartDescription?.text = "Stock Line chart"
     }
 }
 
