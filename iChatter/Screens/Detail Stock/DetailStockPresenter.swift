@@ -19,7 +19,7 @@ class DetailStockPresenter: BasePresenter {
     private var view : DetailStockView!
     private var timer : Timer?
     private var stock : Stock!
-    private let interval15seconds : TimeInterval = 30
+    private let interval15seconds : TimeInterval = 15
     
     init(_ view: DetailStockView, _ stock : Stock) {
         super.init(view)
@@ -55,7 +55,7 @@ class DetailStockPresenter: BasePresenter {
     }
     
     
-    func requestProfileStock(stock : Stock) {
+    func requestProfileStock() {
         let task = GetStockProfile(stock: stock)
         super.requestApi(api: task, completion: { [unowned self] (stock) in
             self.view.onStockProfileLoaded(stock)

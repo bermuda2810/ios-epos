@@ -35,12 +35,16 @@ class DetailStockViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = DetailStockPresenter(self, stock)
+        presenter.requestProfileStock()
         initSegment()
         loadStockInfo()
         showHistoryOfMonths(month: 3)
     }
     
     private func initSegment() {
+        multiSegment.allowsMultipleSelection = false
+        multiSegment.backgroundColor = UIColor.white
+        multiSegment.selectedSegmentIndex = 0
         multiSegment.items = ["3 months", "6 months", "1 year", "3 years"]
         multiSegment.addTarget(self, action: #selector(onSegmentFilterChanged), for: .valueChanged)
     }
@@ -73,14 +77,6 @@ class DetailStockViewController: BaseViewController {
             imgFavourite.tintColor = UIColor.green
         }else {
             imgFavourite.tintColor = UIColor.lightGray
-        }
-        if let profile = stock.profile {
-            lblLastDiv.text = "\(profile.lastDiv)"
-            lblSector.text = profile.sector
-            lblChanges.text = String.init(format: "%.2f", profile.changes)
-            lblIndustry.text = profile.industry
-            let url = URL(string: profile.image ?? "")
-            imgStock.kf.setImage(with: url, placeholder: UIImage(named: "default_stock"))
         }
     }
     
@@ -118,7 +114,14 @@ extension DetailStockViewController : DetailStockView {
     }
     
     func onStockProfileLoaded(_ stock: Stock) {
-        
+        if let profile = stock.profile {
+            lblLastDiv.text = "\(profile.lastDiv)"
+            lblSector.text = profile.sector
+            lblChanges.text = String.init(format: "%.2f", profile.changes)
+            lblIndustry.text = profile.industry
+            let url = URL(string: profile.image ?? "")
+            imgStock.kf.setImage(with: url, placeholder: UIImage(named: "default_stock"))
+        }
     }
 }
 
