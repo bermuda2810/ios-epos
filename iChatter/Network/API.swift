@@ -12,4 +12,5 @@ class Api {
     static let listStock = "stock/list"
     static let profile = "profile"
     static let realTimePrice = "quote-short"
+    static let historicalPrice = "historical-price-full"
 }

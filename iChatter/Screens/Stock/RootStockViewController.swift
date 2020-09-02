@@ -12,6 +12,7 @@ class RootStockViewController: BaseViewController {
     
     private var presenter : RootStockPresenter!
     private var listStockVC : ListStockViewController?
+    private var selectedStock : Stock?
     
     @IBOutlet weak var segmentFilter: UISegmentedControl!
     
@@ -33,6 +34,9 @@ class RootStockViewController: BaseViewController {
         if segue.identifier == "segueListStockViewController" {
             self.listStockVC = segue.destination as? ListStockViewController
             self.listStockVC?.delegate = self
+        } else if segue.identifier == "segueStockDetailViewController" {
+            let destVC = segue.destination as! DetailStockViewController
+            destVC.stock = selectedStock!
         }
     }
 }
@@ -57,7 +61,8 @@ extension RootStockViewController : RootStockView {
 
 extension RootStockViewController : ListStockDelegate {
     
-    func onMoveOnStockDetail(_ stock: Stock) {
+    func onShowDetailsStock(_ stock: Stock) {
+        self.selectedStock = stock
         performSegue(withIdentifier: "segueStockDetailViewController", sender: nil)
     }
 }

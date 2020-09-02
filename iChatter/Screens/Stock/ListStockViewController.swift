@@ -10,7 +10,7 @@ import UIKit
 import ESPullToRefresh
 
 protocol ListStockDelegate : class {
-    func onMoveOnStockDetail(_ stock : Stock)
+    func onShowDetailsStock(_ stock : Stock)
 }
 
 class ListStockViewController: BaseViewController {
@@ -153,6 +153,6 @@ extension ListStockViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let stock = stocks[indexPath.row]
-        self.delegate?.onMoveOnStockDetail(stock)
+        self.delegate?.onShowDetailsStock(stock)
     }
 }

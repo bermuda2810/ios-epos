@@ -36,7 +36,7 @@ class BaseTask<T> {
         let headers: HTTPHeaders = self.getDefaultHeaders()
         let method: HTTPMethod = dataSource.method()
         let url:URLConvertible = self.genURL()
-        let params: Dictionary = self.getDefaultParams()
+        let params: Dictionary = self.genParams()
         let encoding : ParameterEncoding = dataSource.paramEncoding()
         
         AF.request(url,
@@ -135,6 +135,16 @@ class BaseTask<T> {
             "Content-Type": "application/json",
             "Accept" : "application/json"
         ]
+    }
+    
+    private func genParams()  -> Parameters{
+        let customParams : Parameters? = dataSource.parameters()
+        if var customParams : Parameters = customParams {
+            customParams["apikey"] = NetworkConfig.API_KEY
+            return customParams
+        }else {
+            return getDefaultParams()
+        }
     }
     
     private func getDefaultParams() -> Parameters {

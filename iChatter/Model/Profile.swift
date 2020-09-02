@@ -19,4 +19,5 @@ class Profile {
     var lastDiv : Int = 0
     var sector : String = ""
     var industry : String = ""
+    var symbol : String = ""
 }

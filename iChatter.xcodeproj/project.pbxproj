@@ -57,6 +57,9 @@
 		BDEE41BD24FD506100962847 /* GetRealTimePriceTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41BC24FD506100962847 /* GetRealTimePriceTask.swift */; };
 		BDEE41C024FD5FE400962847 /* DetailStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41BF24FD5FE400962847 /* DetailStockViewController.swift */; };
 		BDEE41C224FD63D500962847 /* DetailStockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41C124FD63D500962847 /* DetailStockPresenter.swift */; };
+		BDEE41C424FD7B2F00962847 /* GetStockHistoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41C324FD7B2F00962847 /* GetStockHistoryTask.swift */; };
+		BDEE41C624FD7C3900962847 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41C524FD7C3900962847 /* Session.swift */; };
+		BDEE41C924FE2A4100962847 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41C824FE2A4100962847 /* ExtensionString.swift */; };
 		FA284CB6BE92441EDA4F72EC /* Pods_iChatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93800A00F2ECF7C2047AFEB /* Pods_iChatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +125,9 @@
 		BDEE41BC24FD506100962847 /* GetRealTimePriceTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimePriceTask.swift; sourceTree = "<group>"; };
 		BDEE41BF24FD5FE400962847 /* DetailStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStockViewController.swift; sourceTree = "<group>"; };
 		BDEE41C124FD63D500962847 /* DetailStockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStockPresenter.swift; sourceTree = "<group>"; };
+		BDEE41C324FD7B2F00962847 /* GetStockHistoryTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStockHistoryTask.swift; sourceTree = "<group>"; };
+		BDEE41C524FD7C3900962847 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		BDEE41C824FE2A4100962847 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 				BDEE419924FCBE1C00962847 /* GetListStockTask.swift */,
 				BDEE41A124FCC56200962847 /* GetStockProfile.swift */,
 				BDEE41BC24FD506100962847 /* GetRealTimePriceTask.swift */,
+				BDEE41C324FD7B2F00962847 /* GetStockHistoryTask.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -231,6 +238,7 @@
 			children = (
 				BDEE419724FCBBD100962847 /* Profile.swift */,
 				BDEE419B24FCBF6000962847 /* Stock.swift */,
+				BDEE41C524FD7C3900962847 /* Session.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 		BDC90784244A0353008C041C /* iChatter */ = {
 			isa = PBXGroup;
 			children = (
+				BDEE41C724FE2A2200962847 /* Utils */,
 				BDEE41A324FCD80800962847 /* Database */,
 				BD87FDB524CEE86F00D63221 /* Localization */,
 				BDADAC9924C1C856008D89E3 /* iChatterDebug.entitlements */,
@@ -308,6 +317,14 @@
 				BDEE41C124FD63D500962847 /* DetailStockPresenter.swift */,
 			);
 			path = "Detail Stock";
+			sourceTree = "<group>";
+		};
+		BDEE41C724FE2A2200962847 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE41C824FE2A4100962847 /* ExtensionString.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F9D7F2464F3F180CE1B66578 /* Pods */ = {
@@ -465,6 +482,7 @@
 				BD1AA63B24A0D2F1005E8F89 /* DateExtension.swift in Sources */,
 				BD73BA9A2493A78A001A62D6 /* Channel.swift in Sources */,
 				BD87FDA424CEE0E500D63221 /* ResponseCode.swift in Sources */,
+				BDEE41C424FD7B2F00962847 /* GetStockHistoryTask.swift in Sources */,
 				BDEE41AD24FCDEC100962847 /* RootStockViewController.swift in Sources */,
 				BDEE41B324FCF36600962847 /* ProfileDB.swift in Sources */,
 				BD87FDBB24CEE97400D63221 /* UILocalizedButton.swift in Sources */,
@@ -474,6 +492,7 @@
 				BD87FDA224CEE04000D63221 /* API.swift in Sources */,
 				BDEE419224FCBAF100962847 /* ListStockViewController.swift in Sources */,
 				BD87FDC924CEECF800D63221 /* LanguageItem.swift in Sources */,
+				BDEE41C624FD7C3900962847 /* Session.swift in Sources */,
 				BDEE41BB24FD445000962847 /* HomeStoryBoard.swift in Sources */,
 				BD87FDA024CEDFDC00D63221 /* JsonCode.swift in Sources */,
 				BD1AA63824A0CEC8005E8F89 /* Identifider.swift in Sources */,
@@ -491,6 +510,7 @@
 				BDEE419E24FCC36600962847 /* StockViewCell.swift in Sources */,
 				BDEE41C224FD63D500962847 /* DetailStockPresenter.swift in Sources */,
 				BDEE41B724FD43E000962847 /* MainStoryBoard.swift in Sources */,
+				BDEE41C924FE2A4100962847 /* ExtensionString.swift in Sources */,
 				BD87FDD224CEF43800D63221 /* BaseTask.swift in Sources */,
 				BDEE41A824FCD84700962847 /* BaseRequestDB.swift in Sources */,
 				BD87FDC724CEECCE00D63221 /* LanguageManager.swift in Sources */,

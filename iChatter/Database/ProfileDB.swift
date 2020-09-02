@@ -42,8 +42,10 @@ class ProfileDB: BaseRequestDB {
     
     func saveProfile(_ profiles : Array<Profile>) {
         do {
+            let stocks = Table("stock")
             for profile in profiles {
-                let insert = table.insert(colStockId <- profile.stockId,
+                let stock = stocks.filter(Expression<String>("symbol") == profile.symbol)
+                let insert = table.insert(colStockId <- stock[Expression<Int>("id")],
                                                colPrice <- profile.price,
                                                colChangesPercentage <- profile.changesPercentage ?? "",
                                                colCompanyName <- profile.companyName ?? "",
@@ -68,7 +70,7 @@ class ProfileDB: BaseRequestDB {
     func getProfile(sockId : Int) -> Profile? {
         do {
             for row in try database.prepare(table.order(colId)) {
-                 var profile = Profile()
+                let profile = Profile()
                 profile.id = row[colId]
                 profile.stockId = row[colStockId]
                 profile.changesPercentage = row[colChangesPercentage]
