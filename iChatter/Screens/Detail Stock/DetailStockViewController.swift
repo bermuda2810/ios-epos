@@ -93,9 +93,12 @@ class DetailStockViewController: BaseViewController {
             lineChartEntry.append(value) // here we add it to the data set
         }
 
-        let line1 = LineChartDataSet(entries: lineChartEntry, label: "Number") //Here we convert lineChartEntry to a LineChartDataSet
+        let line1 = LineChartDataSet(entries: lineChartEntry, label: "") //Here we convert lineChartEntry to a LineChartDataSet
         line1.colors = [NSUIColor.blue] //Sets the colour to blue
-
+        line1.circleHoleRadius = 0.0
+        line1.circleRadius = 0.0
+        line1.drawValuesEnabled = false
+        
         let data = LineChartData() //This is the object that will be added to the chart
         data.addDataSet(line1) //Adds the line to the dataSet
         
