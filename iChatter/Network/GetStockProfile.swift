@@ -33,6 +33,7 @@ class GetStockProfile: BaseTask<Stock>, TaskDatasource {
     
     func onParseDataByResponse(_ response: JSON) throws -> Any {
         let profile = Profile()
+        profile.stockId = self.stock.id
         profile.changesPercentage = response[0]["changesPercentage"].stringValue
         profile.image = response[0]["image"].stringValue
         profile.companyName = response[0]["companyName"].stringValue

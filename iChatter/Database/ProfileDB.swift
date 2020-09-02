@@ -42,15 +42,17 @@ class ProfileDB: BaseRequestDB {
     
     func saveProfile(_ profiles : Array<Profile>) {
         do {
-            let stocks = Table("stock")
+//            let stocks = Table("stock")
             for profile in profiles {
-                let stock = stocks.filter(Expression<String>("symbol") == profile.symbol)
-                let insert = table.insert(colStockId <- stock[Expression<Int>("id")],
-                                               colPrice <- profile.price,
-                                               colChangesPercentage <- profile.changesPercentage ?? "",
-                                               colCompanyName <- profile.companyName ?? "",
-                                               colImage <- profile.image ?? "")
+                //                for stock in try  database.prepare(stocks.filter(Expression<String>("symbol") == profile.symbol)) {
+                //                    let stockId = stock[Expression<Int>("id")]
+                let insert = table.insert(colStockId <- profile.stockId,
+                                          colPrice <- profile.price,
+                                          colChangesPercentage <- profile.changesPercentage ?? "",
+                                          colCompanyName <- profile.companyName ?? "",
+                                          colImage <- profile.image ?? "")
                 try database.run(insert)
+                //                }
             }
         } catch {
             print("Insert to profile error")

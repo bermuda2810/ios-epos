@@ -22,5 +22,4 @@ class NetworkConfig {
     
     static var API_KEY : String = "b60cdf1ecaaf183fae39abda727dc667"
     
-    
 }

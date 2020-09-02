@@ -58,7 +58,7 @@ class DatabaseManager {
                 return false
             }
         }else {
-            print("\(fileName) exist in documents folder")
+            print("\(fileName) existed in documents folder")
             return true
         }
     }

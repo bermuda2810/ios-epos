@@ -24,6 +24,121 @@
             </objects>
             <point key="canvasLocation" x="-1086" y="6"/>
         </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="ThF-kk-AIq">
+            <objects>
+                <navigationController toolbarHidden="NO" hidesBarsOnSwipe="YES" id="V9n-TL-yuE" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="BNa-im-hwf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MQH-qj-Ydj">
+                        <rect key="frame" x="0.0" y="759" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
+                            <real key="value" value="300"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="allowPushOfSameClassTwice" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="presentingViewControllerUserInteractionEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="M28-is-97L" kind="relationship" relationship="rootViewController" id="Crb-wP-1Pe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LbK-xw-UN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1130" y="790"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zmw-fO-yeL">
+            <objects>
+                <viewController id="M28-is-97L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wkG-QN-tSi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="306-ad-YVa">
+                                <rect key="frame" x="0.0" y="76" width="389" height="82"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Jac-NS-gHc">
+                                        <rect key="frame" x="271" y="0.0" width="118" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oG-1V-cYC">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Text"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rtu-76-F1y">
+                                                <rect key="frame" x="69" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDe-eR-b2d">
+                                        <rect key="frame" x="15" y="46" width="374" height="0.5"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="s2u-Ov-Bg9"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="jxN-Qn-Z33">
+                                        <rect key="frame" x="255.5" y="61.5" width="133.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gc-Bf-RfP">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Text"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9N-xP-ijq">
+                                                <rect key="frame" x="112" y="0.0" width="21.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Text"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7gc-Bf-RfP" firstAttribute="leading" secondItem="jxN-Qn-Z33" secondAttribute="leading" id="0kf-Uf-rX4"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jac-NS-gHc" secondAttribute="trailing" id="5GJ-NE-3Pt"/>
+                                    <constraint firstItem="mDe-eR-b2d" firstAttribute="leading" secondItem="306-ad-YVa" secondAttribute="leading" constant="15" id="oce-5p-b8a"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="306-ad-YVa" firstAttribute="leading" secondItem="BTt-zs-mgs" secondAttribute="leading" id="VVB-HW-lFb"/>
+                            <constraint firstItem="306-ad-YVa" firstAttribute="top" secondItem="BTt-zs-mgs" secondAttribute="top" constant="20" id="jRd-jL-xgq"/>
+                            <constraint firstItem="BTt-zs-mgs" firstAttribute="trailing" secondItem="306-ad-YVa" secondAttribute="trailing" constant="25" id="vN9-dB-sk4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BTt-zs-mgs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="96F-Wr-w2y"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableSwipeToDismissGesture" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="dismissWhenBackgrounded" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableTapToDismissGesture" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysAnimate" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="presentingViewControllerUserInteractionEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
+                            <real key="value" value="280"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPW-Lo-k2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1125" y="1553"/>
+        </scene>
         <!--Root Stock View Controller-->
         <scene sceneID="esr-fN-Y3X">
             <objects>
@@ -61,7 +176,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BK8-4y-tih"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hLX-YP-yw5"/>
+                    <navigationItem key="navigationItem" id="hLX-YP-yw5">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="Y2g-da-zXV">
+                            <connections>
+                                <segue destination="V9n-TL-yuE" kind="presentation" id="rbt-kf-bug"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="segmentFilter" destination="ixj-Ju-zHQ" id="D9z-r1-H8W"/>
                         <segue destination="XV8-y0-dTp" kind="show" identifier="segueStockDetailViewController" id="OUe-Jh-mxy"/>
@@ -182,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0R4-Qd-49H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217" y="755"/>
+            <point key="canvasLocation" x="-171" y="751"/>
         </scene>
         <!--Detail Stock View Controller-->
         <scene sceneID="OnE-uE-TcO">
@@ -437,6 +558,9 @@
     <resources>
         <image name="default_stock" width="170" height="170"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Background Cell">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

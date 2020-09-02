@@ -32,15 +32,15 @@ class GetStockHistoryTask: BaseTask<Array<Session>>, TaskDatasource {
     }
     
     func parameters() -> Parameters? {
-        return ["from" : fromDate as Any,
-                "to" : toDate as Any]
+        return ["from" : fromDate!,
+                "to" : toDate!]
     }
     
     func onParseDataByResponse(_ response: JSON) throws -> Any {
         var sessions : Array<Session> = []
         let jSessions = response["historical"].array
         if let jSessions = jSessions {
-            for i in (0...jSessions.count) {
+            for i in (0..<jSessions.count) {
                 let session = Session()
                 session.date = jSessions[i]["data"].stringValue
                 session.open = jSessions[i]["open"].doubleValue

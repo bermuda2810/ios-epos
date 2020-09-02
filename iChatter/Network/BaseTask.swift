@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-protocol TaskDatasource {
+protocol TaskDatasource : class {
     func method() -> HTTPMethod
     func api() -> String
     func parameters() -> Parameters?
@@ -19,7 +19,7 @@ protocol TaskDatasource {
 }
 
 class BaseTask<T> {
-    private var dataSource : TaskDatasource {
+    private weak var dataSource : TaskDatasource? {
         (self as! TaskDatasource)
     }
     
@@ -27,25 +27,28 @@ class BaseTask<T> {
     private var blockFailure : ((_ errorCode :Int, _ errorMessage :String) -> Void)?
     
     
-    public func requestAPI(blockSuccess :@escaping (_ result :T) -> Void ,
-                           blockFailure :@escaping (_ errorCode :Int,_ errorMessage :String) -> Void) {
+    public func requestAPI(blockSuccess :@escaping (_ result :T) -> Void,
+                           blockFailure :@escaping (_ errorCode :Int, _ errorMessage :String) -> Void) {
         
         self.blockSuccess = blockSuccess
         self.blockFailure = blockFailure
         
-        let headers: HTTPHeaders = self.getDefaultHeaders()
-        let method: HTTPMethod = dataSource.method()
-        let url:URLConvertible = self.genURL()
-        let params: Dictionary = self.genParams()
-        let encoding : ParameterEncoding = dataSource.paramEncoding()
-        
-        AF.request(url,
-                   method: method,
-                   parameters: params,
-                   encoding: encoding,
-                   headers: headers).responseJSON { (response) in
-                    self.handleResponse(response)
+        if let dataSource = dataSource {
+            let headers: HTTPHeaders = self.getDefaultHeaders()
+                   let method: HTTPMethod = dataSource.method()
+                   let url:URLConvertible = self.genURL()
+                   let params: Dictionary = self.genParams()
+                   let encoding : ParameterEncoding = dataSource.paramEncoding()
+                   
+                   AF.request(url,
+                              method: method,
+                              parameters: params,
+                              encoding: encoding,
+                              headers: headers).responseJSON { (response) in
+                               self.handleResponse(response)
+                   }
         }
+       
     }
     
     private func handleResponse(_ response :DataResponse<Any, AFError>) {
@@ -84,7 +87,7 @@ class BaseTask<T> {
             self.blockFailure!(ResponseCode.somethingWentWrong, errorMessage)
         }else {
             do {
-                let result = try dataSource.onParseDataByResponse(json)
+                let result = try dataSource!.onParseDataByResponse(json)
                 print("Go to success block")
                 self.blockSuccess!(result as! T)
             } catch {
@@ -124,7 +127,7 @@ class BaseTask<T> {
     //    }
     
     func genURL() -> String {
-        let api :String = dataSource.api()
+        let api :String = dataSource!.api()
         let url :String = String.init(format: "%@/%@/%@", NetworkConfig.API_URL, NetworkConfig.API_VERSION, api)
         print("API requesting ", url)
         return url
@@ -137,8 +140,8 @@ class BaseTask<T> {
         ]
     }
     
-    private func genParams()  -> Parameters{
-        let customParams : Parameters? = dataSource.parameters()
+    private func genParams()  -> Parameters {
+        let customParams : Parameters? = dataSource!.parameters()
         if var customParams : Parameters = customParams {
             customParams["apikey"] = NetworkConfig.API_KEY
             return customParams

@@ -50,10 +50,6 @@
 		BDEE41AF24FCDFE000962847 /* RootStockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41AE24FCDFE000962847 /* RootStockPresenter.swift */; };
 		BDEE41B124FCEB2400962847 /* stock.db in Resources */ = {isa = PBXBuildFile; fileRef = BDEE41B024FCEB2400962847 /* stock.db */; };
 		BDEE41B324FCF36600962847 /* ProfileDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41B224FCF36600962847 /* ProfileDB.swift */; };
-		BDEE41B624FD43E000962847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDEE41B424FD43E000962847 /* Main.storyboard */; };
-		BDEE41B724FD43E000962847 /* MainStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41B524FD43E000962847 /* MainStoryBoard.swift */; };
-		BDEE41BA24FD445000962847 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDEE41B824FD445000962847 /* Home.storyboard */; };
-		BDEE41BB24FD445000962847 /* HomeStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41B924FD445000962847 /* HomeStoryBoard.swift */; };
 		BDEE41BD24FD506100962847 /* GetRealTimePriceTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41BC24FD506100962847 /* GetRealTimePriceTask.swift */; };
 		BDEE41C024FD5FE400962847 /* DetailStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41BF24FD5FE400962847 /* DetailStockViewController.swift */; };
 		BDEE41C224FD63D500962847 /* DetailStockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE41C124FD63D500962847 /* DetailStockPresenter.swift */; };
@@ -118,10 +114,6 @@
 		BDEE41AE24FCDFE000962847 /* RootStockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStockPresenter.swift; sourceTree = "<group>"; };
 		BDEE41B024FCEB2400962847 /* stock.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = stock.db; sourceTree = "<group>"; };
 		BDEE41B224FCF36600962847 /* ProfileDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDB.swift; sourceTree = "<group>"; };
-		BDEE41B424FD43E000962847 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		BDEE41B524FD43E000962847 /* MainStoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainStoryBoard.swift; sourceTree = "<group>"; };
-		BDEE41B824FD445000962847 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		BDEE41B924FD445000962847 /* HomeStoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeStoryBoard.swift; sourceTree = "<group>"; };
 		BDEE41BC24FD506100962847 /* GetRealTimePriceTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRealTimePriceTask.swift; sourceTree = "<group>"; };
 		BDEE41BF24FD5FE400962847 /* DetailStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStockViewController.swift; sourceTree = "<group>"; };
 		BDEE41C124FD63D500962847 /* DetailStockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStockPresenter.swift; sourceTree = "<group>"; };
@@ -177,10 +169,6 @@
 		BD693EE724584AD30093F643 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				BDEE41B824FD445000962847 /* Home.storyboard */,
-				BDEE41B924FD445000962847 /* HomeStoryBoard.swift */,
-				BDEE41B424FD43E000962847 /* Main.storyboard */,
-				BDEE41B524FD43E000962847 /* MainStoryBoard.swift */,
 				BDEE419F24FCC3FC00962847 /* StockStoryBoard.swift */,
 				BD693EE1245844130093F643 /* BaseStoryBoard.swift */,
 				BDEE418C24FCB49A00962847 /* Stock.storyboard */,
@@ -400,13 +388,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDEE418F24FCB78900962847 /* Colors.xcassets in Resources */,
-				BDEE41BA24FD445000962847 /* Home.storyboard in Resources */,
 				BDC90792244A035E008C041C /* LaunchScreen.storyboard in Resources */,
 				BDC9078F244A035E008C041C /* Assets.xcassets in Resources */,
 				BD87FDC124CEEA4F00D63221 /* LocalizationPagingScreen.strings in Resources */,
 				BDEE41B124FCEB2400962847 /* stock.db in Resources */,
 				BDEE418D24FCB49A00962847 /* Stock.storyboard in Resources */,
-				BDEE41B624FD43E000962847 /* Main.storyboard in Resources */,
 				BD87FDCC24CEF17600D63221 /* LocalizationMessage.strings in Resources */,
 				BD17050124851CDE00FD84FE /* GoogleService-Info.plist in Resources */,
 			);
@@ -493,7 +479,6 @@
 				BDEE419224FCBAF100962847 /* ListStockViewController.swift in Sources */,
 				BD87FDC924CEECF800D63221 /* LanguageItem.swift in Sources */,
 				BDEE41C624FD7C3900962847 /* Session.swift in Sources */,
-				BDEE41BB24FD445000962847 /* HomeStoryBoard.swift in Sources */,
 				BD87FDA024CEDFDC00D63221 /* JsonCode.swift in Sources */,
 				BD1AA63824A0CEC8005E8F89 /* Identifider.swift in Sources */,
 				BD693EE2245844130093F643 /* BaseStoryBoard.swift in Sources */,
@@ -509,7 +494,6 @@
 				BD99260B24979464007858B8 /* AuthCode.swift in Sources */,
 				BDEE419E24FCC36600962847 /* StockViewCell.swift in Sources */,
 				BDEE41C224FD63D500962847 /* DetailStockPresenter.swift in Sources */,
-				BDEE41B724FD43E000962847 /* MainStoryBoard.swift in Sources */,
 				BDEE41C924FE2A4100962847 /* ExtensionString.swift in Sources */,
 				BD87FDD224CEF43800D63221 /* BaseTask.swift in Sources */,
 				BDEE41A824FCD84700962847 /* BaseRequestDB.swift in Sources */,

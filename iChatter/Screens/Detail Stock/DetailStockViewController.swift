@@ -37,6 +37,7 @@ class DetailStockViewController: BaseViewController {
         presenter = DetailStockPresenter(self, stock)
         initSegment()
         loadStockInfo()
+        showHistoryOfMonths(month: 3)
     }
     
     private func initSegment() {
@@ -55,7 +56,11 @@ class DetailStockViewController: BaseViewController {
         }else if (multiSegment.selectedSegmentIndex == 3) {
             i = 36
         }
-        let fromDate = (Date() - i.months).toFormat("yyyy-MM-dd")
+        self.showHistoryOfMonths(month: i)
+    }
+    
+    private func showHistoryOfMonths(month : Int) {
+        let fromDate = (Date() - month.months).toFormat("yyyy-MM-dd")
         let toDate = Date().toFormat("yyyy-MM-dd")
         presenter.requestHistoryStock(fromDate: fromDate, toDate: toDate)
     }
