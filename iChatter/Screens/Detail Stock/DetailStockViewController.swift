@@ -44,8 +44,8 @@ class DetailStockViewController: BaseViewController {
     private func initSegment() {
         multiSegment.allowsMultipleSelection = false
         multiSegment.backgroundColor = UIColor.white
-        multiSegment.selectedSegmentIndex = 0
         multiSegment.items = ["3 months", "6 months", "1 year", "3 years"]
+        multiSegment.selectedSegmentIndex = 0
         multiSegment.addTarget(self, action: #selector(onSegmentFilterChanged), for: .valueChanged)
     }
     

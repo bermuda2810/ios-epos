@@ -33,10 +33,7 @@ class DetailStockPresenter: BasePresenter {
     }
     
     private func startTimer() {
-        timer?.invalidate()
-        if (stock.favourite == 1) {
-            timer = Timer.scheduledTimer(timeInterval: interval15seconds, target: self, selector: #selector(onRefreshPrice), userInfo: nil, repeats: true)
-        }
+        timer = Timer.scheduledTimer(timeInterval: interval15seconds, target: self, selector: #selector(onRefreshPrice), userInfo: nil, repeats: true)
     }
     
     
